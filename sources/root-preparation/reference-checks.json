@@ -1,0 +1,151 @@
+{
+  "purpose": "Published reference-asset feasibility, not learner evaluation",
+  "repository": "https://github.com/gabeorlanski/scb-problems",
+  "revision": "ef6a9dd13911566b6b01075ca121758c9f7b5c5f",
+  "python": "3.12.12 (main, Feb 12 2026, 00:42:34) [Clang 21.1.4 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "packages": {
+    "pytest": "8.3.2",
+    "jsonschema": "4.21.1",
+    "tree-sitter": "0.21.3",
+    "tree-sitter-languages": "1.10.2"
+  },
+  "runs": [
+    {
+      "problem": "etl_pipeline",
+      "reference_checkpoint": 3,
+      "test_checkpoints": [
+        1,
+        2,
+        3
+      ],
+      "command": [
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python",
+        "-m",
+        "pytest",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_1.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_2.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_3.py",
+        "--entrypoint",
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python /Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/solutions/checkpoint_3/etl_pipeline.py",
+        "--checkpoint",
+        "checkpoint_3",
+        "-q",
+        "--disable-warnings",
+        "--junitxml=/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/etl_pipeline-checkpoint-3.xml"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 7.755,
+      "tests": 117,
+      "passed": 117,
+      "skipped": 0,
+      "failures": [],
+      "log": ".cache/task-sequence-review/etl_pipeline-checkpoint-3.txt",
+      "log_sha256": "c81dc09cf9d9a258e659dae58473f0b65f4500135134947d7c7e60dae86752fe",
+      "junit_sha256": "e11a90989b81817f0ffbd161e139662700013e4542aa0cf2dcfdf457df86c0f3"
+    },
+    {
+      "problem": "etl_pipeline",
+      "reference_checkpoint": 4,
+      "test_checkpoints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "command": [
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python",
+        "-m",
+        "pytest",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_1.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_2.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_3.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/tests/test_checkpoint_4.py",
+        "--entrypoint",
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python /Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/etl_pipeline/solutions/checkpoint_4/etl_pipeline.py",
+        "--checkpoint",
+        "checkpoint_4",
+        "-q",
+        "--disable-warnings",
+        "--junitxml=/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/etl_pipeline-checkpoint-4.xml"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 8.258,
+      "tests": 134,
+      "passed": 134,
+      "skipped": 0,
+      "failures": [],
+      "log": ".cache/task-sequence-review/etl_pipeline-checkpoint-4.txt",
+      "log_sha256": "a272984ed8e0dcd3942da6c1d9abe3df22315be377ad6ebd34434d109f681398",
+      "junit_sha256": "acbcaa88f41d3cc0d7d8a8f87f159be75cea4bce7b40e7b65cdea7c7973d0d64"
+    },
+    {
+      "problem": "code_search",
+      "reference_checkpoint": 3,
+      "test_checkpoints": [
+        1,
+        2,
+        3
+      ],
+      "command": [
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python",
+        "-m",
+        "pytest",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_1.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_2.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_3.py",
+        "--entrypoint",
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python /Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/solutions/checkpoint_3/code_search.py",
+        "--checkpoint",
+        "checkpoint_3",
+        "-q",
+        "--disable-warnings",
+        "--junitxml=/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/code_search-checkpoint-3.xml"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.618,
+      "tests": 47,
+      "passed": 47,
+      "skipped": 0,
+      "failures": [],
+      "log": ".cache/task-sequence-review/code_search-checkpoint-3.txt",
+      "log_sha256": "9789ee2a59112aeb2938073ca78fd554d9f11c62e0454a6859d449fe101d5437",
+      "junit_sha256": "cc25ce8c64d8014ae48b57635b9d96a3695497ebd532e6b0a55f94bfbeab666d"
+    },
+    {
+      "problem": "code_search",
+      "reference_checkpoint": 4,
+      "test_checkpoints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "command": [
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python",
+        "-m",
+        "pytest",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_1.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_2.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_3.py",
+        "/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/tests/test_checkpoint_4.py",
+        "--entrypoint",
+        "/Users/macos-user/.cache/uv/environments-v2/review-task-sequences-5b40301742443935/bin/python /Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/scb-problems/code_search/solutions/checkpoint_4/code_search.py",
+        "--checkpoint",
+        "checkpoint_4",
+        "-q",
+        "--disable-warnings",
+        "--junitxml=/Users/macos-user/Developer/Projects/alignment-farm/construct-2/.cache/task-sequence-review/code_search-checkpoint-4.xml"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 5.316,
+      "tests": 75,
+      "passed": 75,
+      "skipped": 0,
+      "failures": [],
+      "log": ".cache/task-sequence-review/code_search-checkpoint-4.txt",
+      "log_sha256": "af08a5770c237d30b3a38fbdd207e5ce232e698558294ec283e18c40f306631e",
+      "junit_sha256": "11bb324279cf60a8a975c2d8488d6de8eeca9d72eb139a94b1353b0e6be9fc9f"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-20",
+  "scope": "Pinned public artifact inspection; no model calls, training or ancillary boundary advance",
+  "repositories": [
+    {
+      "cache": ".cache/task-sequence-review/scb-problems",
+      "remote": "https://github.com/gabeorlanski/scb-problems.git",
+      "revision": "ef6a9dd13911566b6b01075ca121758c9f7b5c5f",
+      "commit": "2026-05-16T16:32:04-05:00 HF Dataset",
+      "tracked_clean": true,
+      "files_sha256": {
+        "README.md": "7d053e0ee4117fac933611d4895e46ddfea47e946c1dbcd9e9643b5bb9f147ab",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "pyproject.toml": "887829bdebbc597eb052f5be19b4a403c3fa85226eb54da345ea575a60d11dc8",
+        "etl_pipeline/config.yaml": "57e7b758b6ec56e6d90be7595de22c1c8ef394e1ab584d969528ca6af4a5bcef",
+        "etl_pipeline/checkpoint_1.md": "9a5885bbe6aaf78c2b3c65df5266361ab2a8a5d1319aab0d6d4e868cc30932aa",
+        "etl_pipeline/checkpoint_2.md": "8fdfed88d34fcfb156bf5a3d9450173a057bdb27383cd826711ff6885a2d29c1",
+        "etl_pipeline/checkpoint_3.md": "17839fd010bbe4905340b2b6cdbed2fd720c0ff1dc35aaba93c877f547b0ba11",
+        "etl_pipeline/checkpoint_4.md": "ae67422699e1249df2e54301acf3a765b7fc087bf4dc4aaf7812e4ce95b9c019",
+        "etl_pipeline/tests/conftest.py": "e3d8d77abd8774ba724ba6aa2ab267bb84773c01678c51391468307615f11d9f",
+        "etl_pipeline/tests/test_checkpoint_1.py": "097b313a82f171d485013aaf14e8f74ce50b23efd862a8a5f098586707b70054",
+        "etl_pipeline/tests/test_checkpoint_2.py": "3188e2b6a136c2679a2f59b32ebf72067b012325790fcdfde001edc087984cfd",
+        "etl_pipeline/tests/test_checkpoint_3.py": "dafbc1223f82be6826e1c14c75fec8f02f9b169ae830019f7245e5b15fdcaea2",
+        "etl_pipeline/tests/test_checkpoint_4.py": "7e2169334875fe251656ca94857326adbec6a099723e2b5abb69ee206324b608",
+        "code_search/config.yaml": "6ae8d68a514bf6e64fd276598a8bc7b55f74cdac7aec4eac39fa7b0fa1da35ac",
+        "code_search/checkpoint_1.md": "661df04fb80b918afe6f02a4ee7157f4a64a079ed3ce2989601332d29137bf4b",
+        "code_search/checkpoint_2.md": "07f2cd414876c179ae06d0b1e80588e18bea85fdb94446fc7e7cfe62f36530f3",
+        "code_search/checkpoint_3.md": "522d7944beb095533a0c0a15c8ec8b38ad45f7a7b8ce93eff351dce37b8d4240",
+        "code_search/checkpoint_4.md": "59382e13f38adfeeab79b262c0d28fd167ea0f702162ee4b236b5c9f5f57475b",
+        "code_search/tests/conftest.py": "b673abcb3cf38e52c0ccdf6ddc3890d4fd8678193f74c18b9dc3521f5fc009b3",
+        "code_search/tests/test_checkpoint_1.py": "daf687f68788b3b19f8ede6a56e2ff26c63a38cd4a537d0e14bcda099e2b4625",
+        "code_search/tests/test_checkpoint_2.py": "d8f8ee055ca0d69d4b641d50042c1ac726ccf83dd32a39322ff59a1f1d52659f",
+        "code_search/tests/test_checkpoint_3.py": "4fe6b38664580197600979fd8f74dec1b7196853afc6fa28470f5e4b454d6202",
+        "code_search/tests/test_checkpoint_4.py": "dab3c1202ee8057edaef27db134846b8d407f90fd95665ad9cba8a5e6bee1678"
+      }
+    },
+    {
+      "cache": ".cache/task-sequence-review/slop-code-bench",
+      "remote": "https://github.com/SprocketLab/slop-code-bench.git",
+      "revision": "c2a53b46ed7227545951168e1dfeea8a6eec9316",
+      "commit": "2026-09-18T20:23:47-05:00 Fix quality gates and maintainability (#23)",
+      "tracked_clean": true,
+      "files_sha256": {
+        "README.md": "ef50ba6c40896df260cd3011865d8c9bfb0427377c9d55acf2f3a7c096a14cb1",
+        "LICENSE": "00dee38493fe6d1f80c800ddc40490a84d48509ae95d522dc516b902951321ef",
+        "AGENTS.md": "5a21a9c55b3a6fcf529f86b890739206fce7ce5b4546bcfe69f597680d474ee0",
+        "configs/prompts/just-solve.jinja": "663d8920c1f88f30f9fc51ff47328a083a61fd13e6db082a9707613a6aa725e3",
+        "src/slop_code/agent_runner/runner.py": "fbf8679f7deb5ae981b55b150337dc74a2b6c64272f6ddb5450cb232680a3446",
+        "src/slop_code/evaluation/pytest_runner.py": "a7bbc8cb447019569ed214e85d987f2daeae27216638709ecacd4693033b9b80",
+        "src/slop_code/evaluation/config.py": "bb3c1755c66b48e33dfd9dd4eedd543c30f1e233b50e842b14b65f645a55abb4"
+      }
+    },
+    {
+      "cache": ".cache/task-sequence-review/cl-bench",
+      "remote": "https://github.com/pgasawa/continual-learning-bench.git",
+      "revision": "5f8c50eb1e84b2eda2ef4faff757dfc812a0ea26",
+      "commit": "2026-07-18T23:36:07-07:00 fix(leaderboard): normalize cohort_studies reward to the current signed metric (#9)",
+      "tracked_clean": true,
+      "files_sha256": {
+        "README.md": "1ec724df686149fb6e45fc7ccc77dd45a7dc057a68ec910df2ad9689fb239d54",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "AGENTS.md": "b5022758e5ba7033c8b2cfae6c93dc44dd1fea8a721e008e81d96cea814fb2d9",
+        "src/tasks/database_exploration/README.md": "73046066ed5f1322648597c3b422c1b373805fd0da730f74712de09a615f500d",
+        "src/tasks/database_exploration/task.py": "d23259196c4bf2204b0b46a515d17f0d435036581349b12dd6386cb2ae5c429e",
+        "src/tasks/database_exploration/prompts.py": "90216c980381e45ae26650195a1e2f1b361ce34854b2b18aa38bf8cf068e70b4",
+        "src/tasks/database_exploration/variants/schema_drift.json": "a4d2aaa620b5c9b8ec35efaf3491f044904e69554bb89b69f33265ffd0e3f1f2",
+        "src/tasks/database_exploration/schedules/default.json": "bb0d0678f469f554c4379dea2b66ff88b89f9fd102edae4f452b523f46977d9d",
+        "data/database_exploration/questions.json": "f98e515c14b74f4d30c29401fb79cca9ceeb15fe9ee2432b10265a4a649d1771",
+        "data/database_exploration/questions_post_drift.json": "c05aa6a33def3878e6b655a1cba6454e55e1a9c16ded8c1fe53b7811986a45de"
+      }
+    }
+  ],
+  "database_data": {
+    "revision": "a0cc57eeb9a54f01c0490a1b46cb705b4e05aa19",
+    "metadata_url": "https://huggingface.co/api/datasets/continual-learning-bench/database-exploration/tree/a0cc57eeb9a54f01c0490a1b46cb705b4e05aa19",
+    "metadata_sha256": "6cbe689d5c07906698512454ce533690a228600d5d1271d37394c5b6adefb433",
+    "files": [
+      {
+        "name": "products.db",
+        "bytes": 397910016,
+        "sha256": "edf8ee80ff125de0bfd6c37a1d185efa9e3037ce28eb1bd1d32ae0829bd264a6"
+      },
+      {
+        "name": "products_drifted.db",
+        "bytes": 432148480,
+        "sha256": "a53d523f70604be0e4328f3722417895250ac35e1127cc504b609576aee70fad"
+      }
+    ]
+  }
+}

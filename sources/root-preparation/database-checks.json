@@ -1,0 +1,53 @@
+{
+  "scope": "Five selected upstream reference SQL queries and stale-column diagnostics; no learner or full CL-Bench runner",
+  "sqlite": "3.50.4",
+  "grading": "Numeric comparison from task.py: exact integer or max(declared tolerance, 1% of expected float)",
+  "queries": [
+    {
+      "database": "products.db",
+      "question_id": 9,
+      "answer_type": "float",
+      "reference_value": 96.23,
+      "matches_published_answer": true,
+      "effective_tolerance": 0.9623
+    },
+    {
+      "database": "products.db",
+      "question_id": 12,
+      "answer_type": "integer",
+      "reference_value": 8,
+      "matches_published_answer": true,
+      "effective_tolerance": 0
+    },
+    {
+      "database": "products_drifted.db",
+      "question_id": 101,
+      "answer_type": "float",
+      "reference_value": 101.8,
+      "matches_published_answer": true,
+      "effective_tolerance": 1.018,
+      "stale_prc_value": 100.85,
+      "stale_value_accepted": true
+    },
+    {
+      "database": "products_drifted.db",
+      "question_id": 103,
+      "answer_type": "integer",
+      "reference_value": 1049,
+      "matches_published_answer": true,
+      "effective_tolerance": 0,
+      "stale_prc_value": 1035,
+      "stale_value_accepted": false
+    },
+    {
+      "database": "products_drifted.db",
+      "question_id": 105,
+      "answer_type": "float",
+      "reference_value": 24.5,
+      "matches_published_answer": true,
+      "effective_tolerance": 0.5,
+      "stale_prc_value": 24.0,
+      "stale_value_accepted": true
+    }
+  ]
+}

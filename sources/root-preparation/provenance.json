@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-20",
+  "origin_repository": "https://github.com/alignment-farm/construct-2",
+  "boundary": "Uncommitted root preparation records copied byte-for-byte; published-reference checks only, no participant or model results. Native report paths belong to the root host.",
+  "files": [
+    {
+      "source_root_path": "sources/2026-09-20-task-sequences/artifact-manifest.json",
+      "copied_path": "artifact-manifest.json",
+      "sha256": "e1d55f06ebc21106e371cda1aabb47f60353901b7fc9db0fe8c2383e54c3dc16"
+    },
+    {
+      "source_root_path": "sources/2026-09-20-task-sequences/reference-checks.json",
+      "copied_path": "reference-checks.json",
+      "sha256": "792ce85a9ff9e7f6ac781d850658ce1cd456cf161908a7718d7fe3e1377d77d0"
+    },
+    {
+      "source_root_path": "sources/2026-09-20-task-sequences/database-checks.json",
+      "copied_path": "database-checks.json",
+      "sha256": "11ef1568d2132b36568aea5581217e1bfc9197888e359b9f2273a6a28f2f9f72"
+    }
+  ]
+}
