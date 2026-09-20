@@ -14,10 +14,70 @@ that behavior. Choose the model and learning method through bounded development;
 the starting target is concrete, not a commitment to one optimizer or model size.
 Training only final patches or answers would not directly teach this procedure.
 
-**Status:** preparation only. No participant acquisition, training or experimental
-result is established. The investigator owns feasibility, workload development,
-methods, protocols, execution, diagnosis and publication. Read [AGENTS.md](AGENTS.md),
+**Status:** bounded pilot complete. A retained LoRA adapter was trained and its
+reset/load isolation checks passed. The pilot establishes a simple fresh repair
+regime, but neither the ordinary nor learned arm completed the held-out branch
+change. The investigator owns feasibility, workload development, methods,
+protocols, execution, diagnosis and publication. Read [AGENTS.md](AGENTS.md),
 the [source guide](sources/README.md) and the [starting instruction](PROMPT.md).
+
+## Pilot result
+
+The pilot used a local Qwen3-4B-Instruct-2507 4-bit model, a researcher-authored
+14-row action trajectory, and a rank-8 LoRA on the final eight layers' Q and V
+projections. Training completed for 28 update steps, reduced the logged loss
+from 1.984375 to 0.033203125, changed the adapter hash, and left the base model
+unchanged. The [isolation report](evidence/pilot-01/isolation.json) confirms
+fresh reset, adapter load, and restored-base generation behavior.
+
+On a fresh one-line filter repair, both base and adapter arms completed the
+repair and passed the external diagnostic, so this pilot does not show an
+adapter-specific acquisition advantage. This diagnostic was added after the
+branch failure to distinguish a smaller shared-regime capability; it was not
+used to select or score the branch transfer. On the later branch change, both arms
+passed the six visible tests but completed 0/3 held-out cases. The learned arm
+searched history and tested early, then exhausted its 16-turn budget on
+truncated multi-site edits; the ordinary arm stopped after an invalid composite
+response. A researcher-authored implementation passes all three held-out cases,
+showing that the workload is executable. These are local development results,
+not an official SlopCodeBench score or benchmark-comparable evaluation.
+
+The full [pilot analysis](evidence/pilot-01/analysis.json), [protocol](protocol/pilot-v1.md),
+[environment record](evidence/pilot-01/environment.json),
+[fresh-repair evaluation](evidence/pilot-01/diagnostic-evaluation.json),
+[ordinary evaluation](evidence/pilot-01/ordinary-evaluation.json),
+[learned evaluation](evidence/pilot-01/learned-evaluation.json), and
+[teacher feasibility report](evidence/pilot-01/teacher-transfer/report.json)
+preserve the claims and their boundaries. The initial failed training attempt is
+also retained under `evidence/pilot-01/adapter/`; the successful retry is under
+`evidence/pilot-01/adapter-retry-01/`. The next useful step is to revise the
+multi-site patch interface and acquisition target, then confirm any improvement
+on fresh material before expanding contrasts or interpreting retention.
+
+The recorded study revision is `7717645`; the pinned workload sources are
+`scb-problems@ef6a9dd13911566b6b01075ca121758c9f7b5c5f` and
+`slop-code-bench@c2a53b46ed7227545951168e1dfeea8a6eec9316`; the local adaptation
+implementation is `mlx-lm@86b48c461feebf87c58788655b7e57b5574b9e6d`; and the
+model manifest pins `mlx-community/Qwen3-4B-Instruct-2507-4bit` at
+`50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b`.
+
+To reproduce the core preparation and reporting steps after restoring the
+model path recorded in `evidence/pilot-01/environment.json`:
+
+```sh
+uv sync --extra adaptation
+uv run --no-sync python scripts/build_pilot.py \
+  --output evidence/pilot-01 --participant-cache .cache/pilot-01
+uv run --no-sync python scripts/train_adapter.py \
+  --model ../weight-consolidation/models/qwen3-4b-4bit \
+  --training evidence/pilot-01/acquisition/training.jsonl \
+  --output evidence/pilot-01/adapter-retry-01 --epochs 2 --seed 17
+uv run --no-sync python scripts/analyze_pilot.py
+```
+
+The agent, isolation, examiner and diagnostic entry points are in `scripts/`,
+with their outputs preserved in the linked evidence; the pinned model and
+source clones are kept under ignored `.cache/` paths.
 
 ## Why this question
 
@@ -124,6 +184,14 @@ without rewriting them. They are predictions, not results.
   with policy-specific workspaces need not survive a matched-workspace diagnostic.
   If it does survive, identify the additional retained contribution rather than
   attributing the whole sequence gain to it.
+
+Pilot assessments are appended here without changing those predictions. For
+CC1, neither arm completed the branch change, so residual experience value was
+not demonstrated. For CC2, the learned arm used more current-task turns without
+completing the change; no repayment or extra-resource comparison is justified.
+For CC3, the matched workspaces produced the same 0/3 result, while both arms
+could repair the smaller fresh change; the pilot does not isolate a policy
+contribution.
 
 ## Evidence and stopping
 

@@ -1,0 +1,191 @@
+[
+  {
+    "name": "first_match_and_otherwise",
+    "payload": {
+      "pipeline": {
+        "steps": [
+          {
+            "op": "branch",
+            "branches": [
+              {
+                "id": "cheap",
+                "when": "price < 20",
+                "steps": [
+                  {
+                    "op": "map",
+                    "as": "tag",
+                    "expr": "\"cheap\""
+                  }
+                ]
+              },
+              {
+                "id": "otherwise",
+                "when": "otherwise",
+                "steps": [
+                  {
+                    "op": "map",
+                    "as": "tag",
+                    "expr": "\"premium\""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "dataset": [
+        {
+          "id": 1,
+          "price": 10
+        },
+        {
+          "id": 2,
+          "price": 25
+        },
+        {
+          "id": 3,
+          "price": 5
+        }
+      ]
+    },
+    "expected": [
+      {
+        "id": 1,
+        "price": 10,
+        "tag": "cheap"
+      },
+      {
+        "id": 3,
+        "price": 5,
+        "tag": "cheap"
+      },
+      {
+        "id": 2,
+        "price": 25,
+        "tag": "premium"
+      }
+    ]
+  },
+  {
+    "name": "first_match_wins_and_unmatched_drop",
+    "payload": {
+      "pipeline": {
+        "steps": [
+          {
+            "op": "branch",
+            "branches": [
+              {
+                "id": "high",
+                "when": "price >= 20",
+                "steps": [
+                  {
+                    "op": "map",
+                    "as": "tag",
+                    "expr": "\"high\""
+                  }
+                ]
+              },
+              {
+                "id": "mid",
+                "when": "price >= 10",
+                "steps": [
+                  {
+                    "op": "map",
+                    "as": "tag",
+                    "expr": "\"mid\""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "dataset": [
+        {
+          "id": 1,
+          "price": 25
+        },
+        {
+          "id": 2,
+          "price": 15
+        },
+        {
+          "id": 3,
+          "price": 5
+        }
+      ]
+    },
+    "expected": [
+      {
+        "id": 1,
+        "price": 25,
+        "tag": "high"
+      },
+      {
+        "id": 2,
+        "price": 15,
+        "tag": "mid"
+      }
+    ]
+  },
+  {
+    "name": "branch_nested_filter_and_limit",
+    "payload": {
+      "pipeline": {
+        "steps": [
+          {
+            "op": "branch",
+            "branches": [
+              {
+                "when": "kind == \"a\"",
+                "steps": [
+                  {
+                    "op": "filter",
+                    "where": "value > 0"
+                  },
+                  {
+                    "op": "limit",
+                    "n": 1
+                  }
+                ]
+              },
+              {
+                "when": "otherwise",
+                "steps": []
+              }
+            ]
+          }
+        ]
+      },
+      "dataset": [
+        {
+          "id": 1,
+          "kind": "a",
+          "value": 1
+        },
+        {
+          "id": 2,
+          "kind": "a",
+          "value": 2
+        },
+        {
+          "id": 3,
+          "kind": "b",
+          "value": 3
+        }
+      ]
+    },
+    "expected": [
+      {
+        "id": 1,
+        "kind": "a",
+        "value": 1
+      },
+      {
+        "id": 3,
+        "kind": "b",
+        "value": 3
+      }
+    ]
+  }
+]

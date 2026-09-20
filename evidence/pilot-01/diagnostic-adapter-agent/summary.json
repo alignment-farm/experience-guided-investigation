@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "done": true,
+  "turns": 7,
+  "tool_calls": 7,
+  "seconds": 21.221802834013943,
+  "peak_mlx_bytes": 3753589860,
+  "workspace_source_hash": "4a13ad5fbe65726091223de7ef46aa714601ca6d458d9ae26f91bbfa755569a8"
+}

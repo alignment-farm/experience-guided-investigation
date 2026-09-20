@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "id": "dev-normalization-0",
+      "input_tokens": 253,
+      "supervised_tokens": 11
+    },
+    {
+      "id": "dev-normalization-1",
+      "input_tokens": 276,
+      "supervised_tokens": 6
+    },
+    {
+      "id": "dev-normalization-2",
+      "input_tokens": 736,
+      "supervised_tokens": 13
+    },
+    {
+      "id": "dev-normalization-3",
+      "input_tokens": 3434,
+      "supervised_tokens": 79
+    },
+    {
+      "id": "dev-normalization-4",
+      "input_tokens": 3469,
+      "supervised_tokens": 6
+    },
+    {
+      "id": "dev-normalization-5",
+      "input_tokens": 3690,
+      "supervised_tokens": 33
+    },
+    {
+      "id": "dev-normalization-6",
+      "input_tokens": 3785,
+      "supervised_tokens": 19
+    },
+    {
+      "id": "dev-execution-0",
+      "input_tokens": 244,
+      "supervised_tokens": 12
+    },
+    {
+      "id": "dev-execution-1",
+      "input_tokens": 285,
+      "supervised_tokens": 6
+    },
+    {
+      "id": "dev-execution-2",
+      "input_tokens": 641,
+      "supervised_tokens": 13
+    },
+    {
+      "id": "dev-execution-3",
+      "input_tokens": 3341,
+      "supervised_tokens": 47
+    },
+    {
+      "id": "dev-execution-4",
+      "input_tokens": 3376,
+      "supervised_tokens": 6
+    },
+    {
+      "id": "dev-execution-5",
+      "input_tokens": 3593,
+      "supervised_tokens": 29
+    },
+    {
+      "id": "dev-execution-6",
+      "input_tokens": 3688,
+      "supervised_tokens": 22
+    }
+  ]
+}

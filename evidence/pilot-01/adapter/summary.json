@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "TypeError('astype(): incompatible function arguments. The following argument types are supported:\\n    1. astype(self, dtype: mlx.core.Dtype, stream: mlx.core.Stream | mlx.core.ThreadLocalStream | mlx.core.Device | mlx.core.DeviceType | None = None) -> mlx.core.array\\n\\nInvoked with types: mlx.core.array, str')",
+  "seconds": 3.5128031659987755
+}

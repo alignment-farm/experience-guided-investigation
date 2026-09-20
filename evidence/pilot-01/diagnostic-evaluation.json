@@ -1,0 +1,64 @@
+{
+  ".cache/pilot-01/diagnostic-base": {
+    "passed": true,
+    "returncode": 0,
+    "actual": {
+      "status": "ok",
+      "data": [
+        {
+          "id": 2,
+          "age": 35
+        }
+      ],
+      "metrics": {
+        "rows_in": 2,
+        "rows_out": 1
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "data": [
+        {
+          "id": 2,
+          "age": 35
+        }
+      ],
+      "metrics": {
+        "rows_in": 2,
+        "rows_out": 1
+      }
+    },
+    "stderr": ""
+  },
+  ".cache/pilot-01/diagnostic-adapter": {
+    "passed": true,
+    "returncode": 0,
+    "actual": {
+      "status": "ok",
+      "data": [
+        {
+          "id": 2,
+          "age": 35
+        }
+      ],
+      "metrics": {
+        "rows_in": 2,
+        "rows_out": 1
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "data": [
+        {
+          "id": 2,
+          "age": 35
+        }
+      ],
+      "metrics": {
+        "rows_in": 2,
+        "rows_out": 1
+      }
+    },
+    "stderr": ""
+  }
+}

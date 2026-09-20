@@ -1,0 +1,31 @@
+{"kind": "provenance", "elapsed": 2.7790432919864543, "python": "3.14.7", "packages": {"mlx": "0.32.2", "mlx-lm": "0.32.0", "transformers": "5.17.0"}, "model": "/Users/macos-user/Developer/Projects/alignment-farm/ancillary-studies/weight-consolidation/models/qwen3-4b-4bit", "rows": 14, "epochs": 2, "seed": 17, "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141", "initial_adapter_hash": "9af6d3108fdefeb308b6f9e8376791c311a4bcdc4be051db0452da1ddf7203e9", "trainable_parameters": 655360}
+{"kind": "prepared", "elapsed": 2.844830583955627, "input_tokens": 30811, "supervised_tokens": 302}
+{"kind": "train_step", "elapsed": 8.493700874969363, "epoch": 0, "row": "dev-execution-3", "step": 1, "loss": 1.984375, "seconds": 5.64753750001546}
+{"kind": "train_step", "elapsed": 8.900055999984033, "epoch": 0, "row": "dev-execution-0", "step": 2, "loss": 3.375, "seconds": 0.40377116698073223}
+{"kind": "train_step", "elapsed": 15.142538791988045, "epoch": 0, "row": "dev-execution-6", "step": 3, "loss": 3.34375, "seconds": 6.239758084004279}
+{"kind": "train_step", "elapsed": 20.897520750004333, "epoch": 0, "row": "dev-normalization-3", "step": 4, "loss": 0.271484375, "seconds": 5.749161750019994}
+{"kind": "train_step", "elapsed": 21.362436749972403, "epoch": 0, "row": "dev-normalization-1", "step": 5, "loss": 0.79296875, "seconds": 0.46170379198156297}
+{"kind": "train_step", "elapsed": 27.44130020897137, "epoch": 0, "row": "dev-execution-5", "step": 6, "loss": 0.62109375, "seconds": 6.072803875023965}
+{"kind": "train_step", "elapsed": 27.863378749985714, "epoch": 0, "row": "dev-normalization-0", "step": 7, "loss": 0.62890625, "seconds": 0.4174569579772651}
+{"kind": "train_step", "elapsed": 28.794104999979027, "epoch": 0, "row": "dev-execution-2", "step": 8, "loss": 0.5234375, "seconds": 0.9252695000031963}
+{"kind": "train_step", "elapsed": 29.879257624968886, "epoch": 0, "row": "dev-normalization-2", "step": 9, "loss": 0.38671875, "seconds": 1.0798297500004992}
+{"kind": "train_step", "elapsed": 35.52720866695745, "epoch": 0, "row": "dev-execution-4", "step": 10, "loss": 0.34375, "seconds": 5.642950874986127}
+{"kind": "train_step", "elapsed": 41.79775366699323, "epoch": 0, "row": "dev-normalization-5", "step": 11, "loss": 1.015625, "seconds": 6.2678380840225145}
+{"kind": "train_step", "elapsed": 47.670043291989714, "epoch": 0, "row": "dev-normalization-4", "step": 12, "loss": 0.0198974609375, "seconds": 5.86768420797307}
+{"kind": "train_step", "elapsed": 54.12001795897959, "epoch": 0, "row": "dev-normalization-6", "step": 13, "loss": 2.375, "seconds": 6.444253458001185}
+{"kind": "train_step", "elapsed": 54.585728459001984, "epoch": 0, "row": "dev-execution-1", "step": 14, "loss": 0.3046875, "seconds": 0.46246833400800824}
+{"kind": "train_step", "elapsed": 60.771532249986194, "epoch": 1, "row": "dev-execution-5", "step": 15, "loss": 0.2578125, "seconds": 6.181016749993432}
+{"kind": "train_step", "elapsed": 61.18544379196828, "epoch": 1, "row": "dev-execution-0", "step": 16, "loss": 1.171875, "seconds": 0.4095340829808265}
+{"kind": "train_step", "elapsed": 67.04504720895784, "epoch": 1, "row": "dev-normalization-3", "step": 17, "loss": 0.2431640625, "seconds": 5.856900500017218}
+{"kind": "train_step", "elapsed": 73.42871508398093, "epoch": 1, "row": "dev-execution-6", "step": 18, "loss": 1.4296875, "seconds": 6.38038475002395}
+{"kind": "train_step", "elapsed": 79.14463237498421, "epoch": 1, "row": "dev-execution-4", "step": 19, "loss": 0.019775390625, "seconds": 5.710689790954348}
+{"kind": "train_step", "elapsed": 80.06286745896796, "epoch": 1, "row": "dev-execution-2", "step": 20, "loss": 0.1591796875, "seconds": 0.9156062909751199}
+{"kind": "train_step", "elapsed": 80.5421273749671, "epoch": 1, "row": "dev-normalization-1", "step": 21, "loss": 0.031005859375, "seconds": 0.4738349170074798}
+{"kind": "train_step", "elapsed": 80.97371370898327, "epoch": 1, "row": "dev-normalization-0", "step": 22, "loss": 0.146484375, "seconds": 0.42962695902679116}
+{"kind": "train_step", "elapsed": 82.04147687496152, "epoch": 1, "row": "dev-normalization-2", "step": 23, "loss": 0.051513671875, "seconds": 1.0652486250037327}
+{"kind": "train_step", "elapsed": 88.63998999999603, "epoch": 1, "row": "dev-normalization-6", "step": 24, "loss": 1.40625, "seconds": 6.595228834019508}
+{"kind": "train_step", "elapsed": 94.21261333400616, "epoch": 1, "row": "dev-execution-3", "step": 25, "loss": 0.29296875, "seconds": 5.569968625030015}
+{"kind": "train_step", "elapsed": 100.49482924997574, "epoch": 1, "row": "dev-normalization-5", "step": 26, "loss": 0.68359375, "seconds": 6.279063459020108}
+{"kind": "train_step", "elapsed": 100.95257162500639, "epoch": 1, "row": "dev-execution-1", "step": 27, "loss": 0.5625, "seconds": 0.4551427920232527}
+{"kind": "train_step", "elapsed": 106.79649774997961, "epoch": 1, "row": "dev-normalization-4", "step": 28, "loss": 0.033203125, "seconds": 5.838246874976903}
+{"kind": "complete", "elapsed": 108.4909274589736, "status": "complete", "steps": 28, "epochs": 2, "rows": 14, "loss_first": 1.984375, "loss_last": 0.033203125, "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141", "initial_adapter_hash": "9af6d3108fdefeb308b6f9e8376791c311a4bcdc4be051db0452da1ddf7203e9", "trained_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488", "adapter_bytes": 2624893, "seconds": 108.49066533398582, "peak_mlx_bytes": 16344306002}

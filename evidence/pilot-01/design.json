@@ -1,0 +1,31 @@
+{
+  "protocol": "pilot-v1",
+  "tasks": {
+    "dev-normalization": {
+      "title": "Repair the checkpoint-1 normalization regression",
+      "requirement": "The current CLI must normalize a rename from/to pair by trimming both field names, while preserving the existing select, map, and error behavior. Run the visible tests, inspect the affected source, make a narrow repair, and verify a targeted rename case.",
+      "variant": "rename-trim-bug"
+    },
+    "dev-execution": {
+      "title": "Repair the checkpoint-2 linear execution regression",
+      "requirement": "The current CLI must execute a linear pipeline and honor limit n=0 by returning zero rows. Preserve the earlier normalization behavior. Use a visible test and a targeted probe to localize and verify the repair.",
+      "variant": "limit-zero-bug"
+    },
+    "transfer-branch": {
+      "title": "Add the unfamiliar checkpoint-3 branch step",
+      "requirement": "Extend the current ETL CLI with a branch step. A branch has a non-empty branches array; each branch has an optional id, a boolean expression in when or the literal otherwise, and nested steps using the existing operations. Rows go to the first matching branch only. An otherwise branch must be last. Execute branch outputs in branch declaration order, preserving row order within each branch; rows with no match are dropped. The normalized form keeps op, branches and merge with strategy concat (default when omitted). Preserve all earlier behavior and error reporting.",
+      "variant": "checkpoint-2"
+    }
+  },
+  "acquisition_rows": 14,
+  "initial_transfer_source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed",
+  "official_problem_revision": "ef6a9dd13911566b6b01075ca121758c9f7b5c5f",
+  "official_runner_revision": "c2a53b46ed7227545951168e1dfeea8a6eec9316",
+  "fresh_diagnostic": {
+    "task": "dev-filter-fresh",
+    "purpose": "diagnose whether the shared model/tool regime can complete a smaller unfamiliar repair after the branch transfer failure",
+    "added_after_transfer_failure": true,
+    "used_to_select_or_score_transfer": false
+  },
+  "participant_boundary": "only initial-transfer-workspace copy; examiner is a sibling outside ToolEnv root"
+}

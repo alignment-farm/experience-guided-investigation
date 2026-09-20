@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "python": "3.14.7",
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "initial_adapter_hash": "64423db9bce52a031e6c0da51a60ac82a9c54bad3fc11332b2598643c6a3924b",
+  "loaded_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488",
+  "expected_trained_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488",
+  "adapter_output": "READY",
+  "restored_output": "READY",
+  "base_unchanged_after_reset": true,
+  "adapter_hash_matches_saved": true,
+  "restored_generation_matches_base_probe": true,
+  "seconds": 4.663893500051927,
+  "peak_mlx_bytes": 2464414736,
+  "passed": true
+}

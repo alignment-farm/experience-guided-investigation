@@ -1,0 +1,24 @@
+{
+  "source_hash": "db6b4f475ab0a2e3b66fd65854abd94e3a70b01d5e3d625d73a2b2fdc212e911",
+  "cases": [
+    {
+      "name": "first_match_and_otherwise",
+      "returncode": 0,
+      "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"price\":10,\"tag\":\"cheap\"},{\"id\":3,\"price\":5,\"tag\":\"cheap\"},{\"id\":2,\"price\":25,\"tag\":\"premium\"}],\"metrics\":{\"rows_in\":3,\"rows_out\":3}}",
+      "stderr": ""
+    },
+    {
+      "name": "first_match_wins_and_unmatched_drop",
+      "returncode": 0,
+      "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"price\":25,\"tag\":\"high\"},{\"id\":2,\"price\":15,\"tag\":\"mid\"}],\"metrics\":{\"rows_in\":3,\"rows_out\":2}}",
+      "stderr": ""
+    },
+    {
+      "name": "branch_nested_filter_and_limit",
+      "returncode": 0,
+      "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"kind\":\"a\",\"value\":1},{\"id\":3,\"kind\":\"b\",\"value\":3}],\"metrics\":{\"rows_in\":3,\"rows_out\":2}}",
+      "stderr": ""
+    }
+  ],
+  "teacher_code": "researcher-authored branch implementation for feasibility only"
+}

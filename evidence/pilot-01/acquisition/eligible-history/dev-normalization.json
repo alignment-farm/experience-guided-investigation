@@ -1,0 +1,50 @@
+{
+  "task": "dev-normalization",
+  "checkpoint": "1",
+  "status": "complete",
+  "observations": [
+    {
+      "turn": 0,
+      "action": "history_search",
+      "ok": true,
+      "returncode": null
+    },
+    {
+      "turn": 1,
+      "action": "test",
+      "ok": false,
+      "returncode": 1
+    },
+    {
+      "turn": 2,
+      "action": "read",
+      "ok": true,
+      "returncode": null
+    },
+    {
+      "turn": 3,
+      "action": "edit",
+      "ok": true,
+      "returncode": null
+    },
+    {
+      "turn": 4,
+      "action": "test",
+      "ok": true,
+      "returncode": 0
+    },
+    {
+      "turn": 5,
+      "action": "probe",
+      "ok": true,
+      "returncode": 0
+    },
+    {
+      "turn": 6,
+      "action": "done",
+      "ok": true,
+      "returncode": null
+    }
+  ],
+  "lesson": "Inspect the source around the failing behavior, test a minimal discriminating input, make the smallest source edit, then rerun both the suite and the probe."
+}

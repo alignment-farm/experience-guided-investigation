@@ -1,0 +1,3 @@
+# Add the unfamiliar checkpoint-3 branch step
+
+Extend the current ETL CLI with a branch step. A branch has a non-empty branches array; each branch has an optional id, a boolean expression in when or the literal otherwise, and nested steps using the existing operations. Rows go to the first matching branch only. An otherwise branch must be last. Execute branch outputs in branch declaration order, preserving row order within each branch; rows with no match are dropped. The normalized form keeps op, branches and merge with strategy concat (default when omitted). Preserve all earlier behavior and error reporting.

@@ -1,0 +1,112 @@
+{
+  "source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed",
+  "public": {
+    "passed": true,
+    "returncode": 0,
+    "seconds": 0.26519729098072276,
+    "stdout": "",
+    "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible.test_executes_map_filter_limit) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible.test_limit_zero_is_empty) ... ok\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible.test_missing_select_column_is_reported) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible.test_normalizes_and_drops_unknown_fields) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible.test_normalizes_trimmed_rename) ... ok\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible.test_rejects_unknown_operation) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.222s\n\nOK\n"
+  },
+  "hidden": [
+    {
+      "name": "first_match_and_otherwise",
+      "passed": false,
+      "returncode": 1,
+      "actual": {
+        "status": "error",
+        "error_code": "UNKNOWN_OP",
+        "message": "ETL_ERROR: unsupported op 'branch'",
+        "path": "pipeline.steps[0].op"
+      },
+      "expected": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 1,
+            "price": 10,
+            "tag": "cheap"
+          },
+          {
+            "id": 3,
+            "price": 5,
+            "tag": "cheap"
+          },
+          {
+            "id": 2,
+            "price": 25,
+            "tag": "premium"
+          }
+        ],
+        "metrics": {
+          "rows_in": 3,
+          "rows_out": 3
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "first_match_wins_and_unmatched_drop",
+      "passed": false,
+      "returncode": 1,
+      "actual": {
+        "status": "error",
+        "error_code": "UNKNOWN_OP",
+        "message": "ETL_ERROR: unsupported op 'branch'",
+        "path": "pipeline.steps[0].op"
+      },
+      "expected": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 1,
+            "price": 25,
+            "tag": "high"
+          },
+          {
+            "id": 2,
+            "price": 15,
+            "tag": "mid"
+          }
+        ],
+        "metrics": {
+          "rows_in": 3,
+          "rows_out": 2
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "branch_nested_filter_and_limit",
+      "passed": false,
+      "returncode": 1,
+      "actual": {
+        "status": "error",
+        "error_code": "UNKNOWN_OP",
+        "message": "ETL_ERROR: unsupported op 'branch'",
+        "path": "pipeline.steps[0].op"
+      },
+      "expected": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 1,
+            "kind": "a",
+            "value": 1
+          },
+          {
+            "id": 3,
+            "kind": "b",
+            "value": 3
+          }
+        ],
+        "metrics": {
+          "rows_in": 3,
+          "rows_out": 2
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "hidden_passed": 0,
+  "hidden_total": 3
+}

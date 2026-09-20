@@ -1,0 +1,465 @@
+{
+  "protocol": "pilot-v1",
+  "official_benchmark_comparability": false,
+  "acquisition": {
+    "teacher_rows": 14,
+    "teacher_work": "researcher-authored and executed through the same participant tools; no teacher model calls",
+    "training": {
+      "status": "complete",
+      "steps": 28,
+      "epochs": 2,
+      "rows": 14,
+      "loss_first": 1.984375,
+      "loss_last": 0.033203125,
+      "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+      "initial_adapter_hash": "9af6d3108fdefeb308b6f9e8376791c311a4bcdc4be051db0452da1ddf7203e9",
+      "trained_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488",
+      "adapter_bytes": 2624893,
+      "seconds": 108.49066533398582,
+      "peak_mlx_bytes": 16344306002
+    },
+    "isolation": {
+      "status": "complete",
+      "python": "3.14.7",
+      "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+      "initial_adapter_hash": "64423db9bce52a031e6c0da51a60ac82a9c54bad3fc11332b2598643c6a3924b",
+      "loaded_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488",
+      "expected_trained_adapter_hash": "cf1bd4374522a469309672dcafd4db4cab2aba81ff49ec5d07a5d4c50cf1a488",
+      "adapter_output": "READY",
+      "restored_output": "READY",
+      "base_unchanged_after_reset": true,
+      "adapter_hash_matches_saved": true,
+      "restored_generation_matches_base_probe": true,
+      "seconds": 4.663893500051927,
+      "peak_mlx_bytes": 2464414736,
+      "passed": true
+    }
+  },
+  "transfer": {
+    "ordinary_continuation": {
+      "agent": {
+        "summary": {
+          "status": "complete",
+          "done": true,
+          "turns": 6,
+          "tool_calls": 3,
+          "seconds": 24.88284045801265,
+          "peak_mlx_bytes": 3586456664,
+          "workspace_source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed"
+        },
+        "model_turns": 6,
+        "invalid_model_actions": 3,
+        "actions": [
+          "read",
+          "search",
+          "done"
+        ],
+        "edits": 0,
+        "successful_tools": 3
+      },
+      "evaluation": {
+        "source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed",
+        "public": {
+          "passed": true,
+          "returncode": 0,
+          "seconds": 0.2616352500044741,
+          "stdout": "",
+          "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible.test_executes_map_filter_limit) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible.test_limit_zero_is_empty) ... ok\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible.test_missing_select_column_is_reported) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible.test_normalizes_and_drops_unknown_fields) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible.test_normalizes_trimmed_rename) ... ok\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible.test_rejects_unknown_operation) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.219s\n\nOK\n"
+        },
+        "hidden": [
+          {
+            "name": "first_match_and_otherwise",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "price": 10,
+                  "tag": "cheap"
+                },
+                {
+                  "id": 3,
+                  "price": 5,
+                  "tag": "cheap"
+                },
+                {
+                  "id": 2,
+                  "price": 25,
+                  "tag": "premium"
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 3
+              }
+            },
+            "stderr": ""
+          },
+          {
+            "name": "first_match_wins_and_unmatched_drop",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "price": 25,
+                  "tag": "high"
+                },
+                {
+                  "id": 2,
+                  "price": 15,
+                  "tag": "mid"
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 2
+              }
+            },
+            "stderr": ""
+          },
+          {
+            "name": "branch_nested_filter_and_limit",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "kind": "a",
+                  "value": 1
+                },
+                {
+                  "id": 3,
+                  "kind": "b",
+                  "value": 3
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 2
+              }
+            },
+            "stderr": ""
+          }
+        ],
+        "hidden_passed": 0,
+        "hidden_total": 3
+      }
+    },
+    "learned_investigation": {
+      "agent": {
+        "summary": {
+          "status": "turn_limit",
+          "done": false,
+          "turns": 16,
+          "tool_calls": 5,
+          "seconds": 193.84664937498746,
+          "peak_mlx_bytes": 4881464400,
+          "workspace_source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed"
+        },
+        "model_turns": 16,
+        "invalid_model_actions": 11,
+        "actions": [
+          "history_search",
+          "read",
+          "test",
+          "read",
+          "read"
+        ],
+        "edits": 0,
+        "successful_tools": 5
+      },
+      "evaluation": {
+        "source_hash": "c7bf6eed08f60c513d94e8be7c1d3851d7a3e3f1b93ac2784b8dcd1caa22b2ed",
+        "public": {
+          "passed": true,
+          "returncode": 0,
+          "seconds": 0.26519729098072276,
+          "stdout": "",
+          "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible.test_executes_map_filter_limit) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible.test_limit_zero_is_empty) ... ok\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible.test_missing_select_column_is_reported) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible.test_normalizes_and_drops_unknown_fields) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible.test_normalizes_trimmed_rename) ... ok\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible.test_rejects_unknown_operation) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.222s\n\nOK\n"
+        },
+        "hidden": [
+          {
+            "name": "first_match_and_otherwise",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "price": 10,
+                  "tag": "cheap"
+                },
+                {
+                  "id": 3,
+                  "price": 5,
+                  "tag": "cheap"
+                },
+                {
+                  "id": 2,
+                  "price": 25,
+                  "tag": "premium"
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 3
+              }
+            },
+            "stderr": ""
+          },
+          {
+            "name": "first_match_wins_and_unmatched_drop",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "price": 25,
+                  "tag": "high"
+                },
+                {
+                  "id": 2,
+                  "price": 15,
+                  "tag": "mid"
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 2
+              }
+            },
+            "stderr": ""
+          },
+          {
+            "name": "branch_nested_filter_and_limit",
+            "passed": false,
+            "returncode": 1,
+            "actual": {
+              "status": "error",
+              "error_code": "UNKNOWN_OP",
+              "message": "ETL_ERROR: unsupported op 'branch'",
+              "path": "pipeline.steps[0].op"
+            },
+            "expected": {
+              "status": "ok",
+              "data": [
+                {
+                  "id": 1,
+                  "kind": "a",
+                  "value": 1
+                },
+                {
+                  "id": 3,
+                  "kind": "b",
+                  "value": 3
+                }
+              ],
+              "metrics": {
+                "rows_in": 3,
+                "rows_out": 2
+              }
+            },
+            "stderr": ""
+          }
+        ],
+        "hidden_passed": 0,
+        "hidden_total": 3
+      }
+    },
+    "same_initial_source_hash": true,
+    "same_visible_obligations": true
+  },
+  "fresh_acquisition_diagnostic": {
+    "base": {
+      "agent": {
+        "summary": {
+          "status": "complete",
+          "done": true,
+          "turns": 5,
+          "tool_calls": 5,
+          "seconds": 17.87404070905177,
+          "peak_mlx_bytes": 3615489112,
+          "workspace_source_hash": "4a13ad5fbe65726091223de7ef46aa714601ca6d458d9ae26f91bbfa755569a8"
+        },
+        "model_turns": 5,
+        "invalid_model_actions": 0,
+        "actions": [
+          "read",
+          "probe",
+          "edit",
+          "test",
+          "done"
+        ],
+        "edits": 1,
+        "successful_tools": 4
+      },
+      "evaluation": {
+        "passed": true,
+        "returncode": 0,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 2,
+              "age": 35
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "expected": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 2,
+              "age": 35
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "stderr": ""
+      }
+    },
+    "adapter": {
+      "agent": {
+        "summary": {
+          "status": "complete",
+          "done": true,
+          "turns": 7,
+          "tool_calls": 7,
+          "seconds": 21.221802834013943,
+          "peak_mlx_bytes": 3753589860,
+          "workspace_source_hash": "4a13ad5fbe65726091223de7ef46aa714601ca6d458d9ae26f91bbfa755569a8"
+        },
+        "model_turns": 7,
+        "invalid_model_actions": 0,
+        "actions": [
+          "history_search",
+          "read",
+          "test",
+          "probe",
+          "edit",
+          "test",
+          "done"
+        ],
+        "edits": 1,
+        "successful_tools": 6
+      },
+      "evaluation": {
+        "passed": true,
+        "returncode": 0,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 2,
+              "age": 35
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "expected": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 2,
+              "age": 35
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "stderr": ""
+      }
+    },
+    "interpretation": "Both arms completed the one-line fresh filter repair; adapter-specific improvement is not established because the unchanged base also succeeded."
+  },
+  "workload_feasibility": {
+    "researcher_authored_transfer": {
+      "source_hash": "db6b4f475ab0a2e3b66fd65854abd94e3a70b01d5e3d625d73a2b2fdc212e911",
+      "cases": [
+        {
+          "name": "first_match_and_otherwise",
+          "returncode": 0,
+          "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"price\":10,\"tag\":\"cheap\"},{\"id\":3,\"price\":5,\"tag\":\"cheap\"},{\"id\":2,\"price\":25,\"tag\":\"premium\"}],\"metrics\":{\"rows_in\":3,\"rows_out\":3}}",
+          "stderr": ""
+        },
+        {
+          "name": "first_match_wins_and_unmatched_drop",
+          "returncode": 0,
+          "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"price\":25,\"tag\":\"high\"},{\"id\":2,\"price\":15,\"tag\":\"mid\"}],\"metrics\":{\"rows_in\":3,\"rows_out\":2}}",
+          "stderr": ""
+        },
+        {
+          "name": "branch_nested_filter_and_limit",
+          "returncode": 0,
+          "stdout": "{\"status\":\"ok\",\"data\":[{\"id\":1,\"kind\":\"a\",\"value\":1},{\"id\":3,\"kind\":\"b\",\"value\":3}],\"metrics\":{\"rows_in\":3,\"rows_out\":2}}",
+          "stderr": ""
+        }
+      ],
+      "teacher_code": "researcher-authored branch implementation for feasibility only"
+    },
+    "interpretation": "The branch change is executable and all three held-out cases pass with a researcher-authored implementation."
+  },
+  "findings": [
+    "The fixed LoRA run changed the adapter and preserved the base hash; exact load/reset checks passed.",
+    "The learned session adopted history search and visible testing early, but did not produce a complete branch patch within 16 turns; repeated multi-site edit outputs were truncated at 384 generated tokens.",
+    "The ordinary session also failed to produce a branch patch, stopping after an invalid composite response.",
+    "Both base and adapter completed a fresh one-line filter repair, so the pilot establishes a functioning simple repair regime but no adapter advantage.",
+    "Zero of three held-out branch cases passed for either transfer arm; this is a demonstrated limitation of the current acquisition/interface regime, not evidence that the neural treatment cannot work with a more suitable patch interface or acquisition target."
+  ],
+  "cc1_assessment": "The branch change required residual experience and multi-site reasoning beyond the current source/history archive, but neither arm completed it; no residual experience value was demonstrated.",
+  "cc2_assessment": "The learned arm spent more current-task turns without completing the branch change; no repayment or extra-resource comparison is justified.",
+  "cc3_assessment": "Both arms used matched checkpoint-2 source and history workspaces. The identical 0/3 outcome does not isolate a policy contribution; the fresh diagnostic shows the shared model/tool regime can repair a smaller change.",
+  "cost_notes": "Measured tokens, elapsed time, MLX allocation and adapter bytes are reported; researcher labor, energy, money and deployment startup are unknown."
+}
