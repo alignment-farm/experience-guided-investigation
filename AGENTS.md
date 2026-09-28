@@ -1,7 +1,8 @@
 # Independent experience-guided investigation
 
-Read [README.md](README.md), [sources/README.md](sources/README.md) and
-[PROMPT.md](PROMPT.md). This project owns workload development, methods, protocols,
+Read [README.md](README.md), the current [continuation instruction](CONTINUE.md),
+and [sources/README.md](sources/README.md). [PROMPT.md](PROMPT.md) preserves the
+initial instruction. This project owns workload development, methods, protocols,
 execution, diagnosis and publication. Construct-2 owns theory and synthesis.
 Begin a fresh ancillary session here and pursue the commissioned question.
 
@@ -32,6 +33,15 @@ Begin a fresh ancillary session here and pursue the commissioned question.
   and discovery leads. Use the arXiv query API for metadata, cache responses, use
   a descriptive User-Agent, and keep API/OAI requests on one connection at least
   three seconds apart across controlled clients; honor Retry-After.
+
+## Investigator policy
+
+Use `gpt-6-astra` for the investigator and any research reviewers, following the
+user's 22 September 2026 policy, reaffirmed in this continuation. Record the actual
+reasoning setting, provider, harness/tool versions, starting revision, interventions
+and known costs. Do not infer an unobserved backend identity. Experimental
+participants, learners and teachers remain scientific choices; the investigator
+policy does not prescribe them. Investigator-family comparisons are deferred.
 
 ## Resources and autonomy
 

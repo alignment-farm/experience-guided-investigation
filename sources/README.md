@@ -6,6 +6,40 @@ Root's records are copied in [root-preparation](root-preparation/provenance.json
 with their origin paths and hashes. Paths inside those reports describe the root
 host; they are not this study's experiment outputs or guaranteed local assets.
 
+## Continuation reading — 28 September
+
+The user-authorized [continuation](../CONTINUE.md) incorporates root's qualified
+pilot review and later synthesis. These are investigator context, not automatically
+eligible participant teaching. The root links below are pinned to its published
+revision `c6aebb4422134b4529d4226aa3a6788367fb5973`.
+
+- [Pilot assessment](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/studies/2026-09-21-experience-investigation-findings.md)
+  and [review ledger](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/sources/2026-09-21-experience-investigation-review/README.md):
+  root replayed frozen actions and checked the stated boolean contract. This
+  qualifies complete-repair, history-parity and acquisition claims, while preserving
+  the original pilot evidence. Root ran no participant inference in that review.
+- **P101, [SWE-agent, `2405.15793v3`](https://arxiv.org/html/2405.15793v3)**:
+  root inspected §§2–3 and §5.1. Compact editing and informative feedback are
+  established methods. This narrows action-interface failures as evidence about
+  memory; public performance results were not locally reproduced.
+- **P42, [Co-Evolving Harnesses and Models, `2609.09134v1`](https://arxiv.org/html/2609.09134v1)**:
+  root revisited §3.4. Correcting a failing turn in a learner's own rollout while
+  preserving surrounding actions supplies a compatible-teaching method to consider.
+  It does not prove that this study's learner will acquire useful investigation.
+- [Evidence-acquisition synthesis](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/notes/EVIDENCE_ACQUISITION.md)
+  and [P110–P113 ledger](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/sources/2026-09-28-evidence-acquisition/README.md):
+  distinguish retaining an answer from learning how to obtain useful evidence on
+  later work. The root's component replays establish software behavior, not agent
+  learning. Constructing and using a distinguishing check remains the open target.
+- [Evidence-set assessment through `8ac9b69`](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/studies/2026-09-28-evidence-set-findings.md):
+  functioning acquisition need not improve complete work beyond ordinary access.
+  A useful energy ranking need not be recovered by its practical search procedure.
+  This is complementary evidence, not a mandate to import that study's mechanism.
+
+These sources answer or narrow generic method questions; none resolves the
+present acquisition and transfer comparison. The investigator owns further
+discovery and records actual inspection and reproduction limits.
+
 ## First workload: inspected runnable reference assets
 
 - SlopCodeBench, **P96 `2603.24755v2`**:

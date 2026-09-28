@@ -14,14 +14,25 @@ that behavior. Choose the model and learning method through bounded development;
 the starting target is concrete, not a commitment to one optimizer or model size.
 Training only final patches or answers would not directly teach this procedure.
 
-**Status:** bounded pilot complete. A retained LoRA adapter was trained and its
-reset/load isolation checks passed. The pilot establishes a simple fresh repair
-regime, but neither the ordinary nor learned arm completed the held-out branch
-change. The investigator owns feasibility, workload development, methods,
-protocols, execution, diagnosis and publication. Read [AGENTS.md](AGENTS.md),
-the [source guide](sources/README.md) and the [starting instruction](PROMPT.md).
+**Status — 28 September 2026:** the user authorized a bounded experimental
+continuation of this existing study. The pilot at `47e5b28` is retained as
+qualified development evidence; useful acquisition and fresh transfer remain
+unresolved. Start with [AGENTS.md](AGENTS.md), [CONTINUE.md](CONTINUE.md) and the
+[source guide](sources/README.md). The original [starting instruction](PROMPT.md)
+remains historical context. This update prepares the handoff; it starts no run.
 
-## Pilot result
+Root's review found that neither branch arm edited its program, and both smaller
+repairs violated the explicit boolean-only contract despite passing their original
+diagnostic. Teaching used two authored trajectories, while ordinary history lacked
+their full records. Thus the original completion interpretation below is qualified;
+changed weights and reported reset probes do not establish complete acquisition.
+See the [pinned root assessment](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/studies/2026-09-21-experience-investigation-findings.md).
+
+## Pilot result as originally reported
+
+The following summary preserves the initial publication's interpretation. Read
+it with the root qualifications above and in [CONTINUE.md](CONTINUE.md); original
+scores and evidence remain unchanged.
 
 The pilot used a local Qwen3-4B-Instruct-2507 4-bit model, a researcher-authored
 14-row action trajectory, and a rank-8 LoRA on the final eight layers' Q and V
@@ -192,6 +203,12 @@ completing the change; no repayment or extra-resource comparison is justified.
 For CC3, the matched workspaces produced the same 0/3 result, while both arms
 could repair the smaller fresh change; the pilot does not isolate a policy
 contribution.
+
+**Root assessment, carried forward 28 September:** CC1 remains unresolved;
+CC2 and CC3 remain untested. The original smaller-repair interpretation is
+incomplete, and parity of the supplied code did not establish equal access to
+the complete teaching history. Preserve the original predictions and pilot
+assessments; append the continuation's findings separately.
 
 ## Evidence and stopping
 

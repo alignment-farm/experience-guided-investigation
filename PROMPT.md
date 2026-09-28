@@ -1,5 +1,10 @@
 # Starting instruction
 
+**Historical starting instruction — 20 September 2026.** The user authorized a
+bounded continuation on 28 September. Start with [CONTINUE.md](CONTINUE.md), which
+adds root's pilot qualifications and the current experimental expectation. Keep
+this original instruction and the pilot record identifiable.
+
 Read AGENTS.md, README.md and sources/README.md. Investigate whether learning
 from earlier attempts improves complete work on a later unfamiliar change across
 fresh sessions, beyond competent code and source-history reuse.
