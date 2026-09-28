@@ -1,0 +1,17 @@
+{
+  "source_events": "evidence/continuation-02/runs/dev-filter-fresh-pilot-adapter/events.jsonl",
+  "source_sha256": "2ed324b20e5ecf61f37a7e367de6fec9031d95302bd4e8a036c9c0863a1d9c2e",
+  "preserved_turns": [
+    0,
+    1,
+    2
+  ],
+  "replaced_turn": 3,
+  "teacher_actions": 5,
+  "training_rows": 7,
+  "intervention": "Replace premature truthy repair with discriminating probe, strict repair and executed verification. Five-turn authored continuation after exact learner prefix; NOT a replication of single-turn-only correction.",
+  "training_initialization": "base Qwen3, not prior adapter; prefix came from pilot-adapter policy, disclosed cross-policy correction",
+  "selection": "development failure inspection; no confirmation outcomes used",
+  "learner_authored_targets": 2,
+  "teacher_authored_targets": 5
+}

@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "composite_rejected": true,
+    "truncated_rejected": true,
+    "single_accepted": true,
+    "escape_rejected": true,
+    "pagination": true,
+    "schema_error_explicit": true,
+    "initial_rejected": true,
+    "truthy_rejected": true,
+    "strict_accepted": true
+  },
+  "passed": true,
+  "negative_control_scores": {
+    "unrepaired": 9,
+    "truthy": 13,
+    "strict": 18
+  }
+}

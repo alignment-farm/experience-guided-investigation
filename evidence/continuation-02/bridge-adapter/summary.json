@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "steps": 4,
+  "epochs": 4,
+  "rows": 1,
+  "loss_first": 0.330078125,
+  "loss_last": 0.04150390625,
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "initial_adapter_hash": "e7202f83321f2cacca1a58cd6626a2a497b970a8c41f983e0cfafbfb72be376f",
+  "trained_adapter_hash": "1667b6b3133c081da1d79a95e1475f13c475ed032dbb617b370f50fd3118bf6e",
+  "adapter_bytes": 2624893,
+  "seconds": 19.770081792026758,
+  "peak_mlx_bytes": 10205181478
+}

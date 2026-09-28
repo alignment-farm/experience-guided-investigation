@@ -1,0 +1,9 @@
+{
+  "url": "https://export.arxiv.org/api/query?id_list=2405.15793v3,2609.09134v1",
+  "user_agent": "experience-guided-investigation/0.2 (bounded interface and acquisition methods study)",
+  "successful_requests": 1,
+  "preceding_attempt": "sandbox DNS resolution failed",
+  "metadata_sha256": "caeb685cdd47370b4a2f3cf06394d0cda63252e2b6fb79909f2847778d96e924",
+  "raw_headers_sha256": "d09f73935747b3c6bc758ae7f1f3c3b74eb24aca84ba8d1d3e45893a7ecfa7db",
+  "saved_headers": "line endings and trailing whitespace normalized; metadata body unchanged"
+}

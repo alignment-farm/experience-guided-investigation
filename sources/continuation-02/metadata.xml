@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/kKgMEid30Xizwjnl1PgZAh9gU3g</id>
+  <title>arXiv Query: search_query=&amp;id_list=2405.15793v3,2609.09134v1&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-28T20:58:43Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2405.15793v3,2609.09134v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2405.15793v3</id>
+    <title>SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</title>
+    <updated>2024-11-11T20:01:15Z</updated>
+    <link href="https://arxiv.org/abs/2405.15793v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.15793v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language model (LM) agents are increasingly being used to automate complicated tasks in digital environments. Just as humans benefit from powerful software applications, such as integrated development environments, for complex tasks like software engineering, we posit that LM agents represent a new category of end users with their own needs and abilities, and would benefit from specially-built interfaces to the software they use. We investigate how interface design affects the performance of language model agents. As a result of this exploration, we introduce SWE-agent: a system that facilitates LM agents to autonomously use computers to solve software engineering tasks. SWE-agent's custom agent-computer interface (ACI) significantly enhances an agent's ability to create and edit code files, navigate entire repositories, and execute tests and other programs. We evaluate SWE-agent on SWE-bench and HumanEvalFix, achieving state-of-the-art performance on both with a pass@1 rate of 12.5% and 87.7%, respectively, far exceeding the previous state-of-the-art achieved with non-interactive LMs. Finally, we provide insight on how the design of the ACI can impact agents' behavior and performance.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-06T17:41:33Z</published>
+    <arxiv:comment>Code, data, and demo available at https://swe-agent.com</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>John Yang</name>
+    </author>
+    <author>
+      <name>Carlos E. Jimenez</name>
+    </author>
+    <author>
+      <name>Alexander Wettig</name>
+    </author>
+    <author>
+      <name>Kilian Lieret</name>
+    </author>
+    <author>
+      <name>Shunyu Yao</name>
+    </author>
+    <author>
+      <name>Karthik Narasimhan</name>
+    </author>
+    <author>
+      <name>Ofir Press</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.09134v1</id>
+    <title>Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails</title>
+    <updated>2026-09-08T17:53:49Z</updated>
+    <link href="https://arxiv.org/abs/2609.09134v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.09134v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agent harnesses (the system prompt, tool set, execution hooks, and context-management scaffolding around a model) are a critical determinant of agentic task success. Automated harness evolution can enable smaller models to perform well on domain-specific tasks at a fraction of frontier-model cost. Since both the harness and model weights shape behavior, we ask how harness evolution and lightweight fine-tuning should be combined. Across seven enterprise agent tasks, we first evolve a harness with the weaker model, then find that a stronger expert often uses it more effectively, suggesting expert supervision could close the remaining gap. However, training the weaker model on the expert's complete trajectories under the evolved harness backfires: performance regresses on all seven tasks by 4 to 30 points across Qwen3-Coder and Gemma 4, even though the same procedure helps under the unevolved harness. Our analysis shows that imitation transfers knowledge and increases scaffold usage, but disrupts model-harness fit: the weaker model adopts the expert's planning strategy without the competence to execute it and no longer matches the harness evolved around its native planning style. We therefore develop an on-policy expert-correction pipeline, automated by a meta-level MLE agent, that localizes the failing turn in the weaker model's own rollout and asks the expert to rewrite only that turn. This preserves the model's planning style and combines the gains of harness evolution and model adaptation. Our results identify and resolve a source of contention between harness and weight updates, yielding a compatibility-preserving recipe for economical co-evolution on domain-specific enterprise tasks.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-08T17:53:49Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhou Yu</name>
+    </author>
+    <author>
+      <name>Bin Bi</name>
+    </author>
+    <author>
+      <name>Shiva Kumar Pentyala</name>
+    </author>
+    <author>
+      <name>Shubham Mehrotra</name>
+    </author>
+    <author>
+      <name>Sougata Chaudhuri</name>
+    </author>
+    <author>
+      <name>Shilpa Bhagavath</name>
+    </author>
+    <author>
+      <name>Zeyuan Chen</name>
+    </author>
+    <author>
+      <name>Ran Xu</name>
+    </author>
+    <author>
+      <name>Phil Mui</name>
+    </author>
+    <author>
+      <name>James Zhu</name>
+    </author>
+    <author>
+      <name>Sitaram Asur</name>
+    </author>
+  </entry>
+</feed>

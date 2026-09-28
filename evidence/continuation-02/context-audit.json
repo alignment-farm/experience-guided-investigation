@@ -1,0 +1,65 @@
+{
+  "conditional_first_prompt_exactly_matches_taught_probe_prompt": true,
+  "actual_conditional_first_action": {
+    "action": "read",
+    "path": "etl_pipeline.py",
+    "start": 100,
+    "limit": 100
+  },
+  "taught_action": {
+    "action": "probe",
+    "payload": {
+      "pipeline": {
+        "steps": [
+          {
+            "op": "filter",
+            "where": "flag"
+          }
+        ]
+      },
+      "dataset": [
+        {
+          "id": 0,
+          "flag": true
+        },
+        {
+          "id": 1,
+          "flag": 1
+        },
+        {
+          "id": 2,
+          "flag": "yes"
+        },
+        {
+          "id": 3,
+          "flag": false
+        },
+        {
+          "id": 4,
+          "flag": null
+        },
+        {
+          "id": 5
+        }
+      ]
+    },
+    "expected": {
+      "status": "ok",
+      "data": [
+        {
+          "id": 0,
+          "flag": true
+        }
+      ],
+      "metrics": {
+        "rows_in": 6,
+        "rows_out": 1
+      }
+    }
+  },
+  "total_cap_hits": 0,
+  "total_history_retrievals": 0,
+  "total_passed_probe_assertions": 0,
+  "all_matched_state_pairs_verified": true,
+  "bridge_initial_state_matches_previous_saved_state": true
+}

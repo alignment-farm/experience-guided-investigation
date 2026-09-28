@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "id": "learner-prefix-0",
+      "input_tokens": 326,
+      "supervised_tokens": 25
+    },
+    {
+      "id": "learner-prefix-1",
+      "input_tokens": 1891,
+      "supervised_tokens": 25
+    },
+    {
+      "id": "correction-0",
+      "input_tokens": 2509,
+      "supervised_tokens": 99
+    },
+    {
+      "id": "correction-1",
+      "input_tokens": 2697,
+      "supervised_tokens": 66
+    },
+    {
+      "id": "correction-2",
+      "input_tokens": 2825,
+      "supervised_tokens": 99
+    },
+    {
+      "id": "correction-3",
+      "input_tokens": 2925,
+      "supervised_tokens": 6
+    },
+    {
+      "id": "correction-4",
+      "input_tokens": 3176,
+      "supervised_tokens": 27
+    }
+  ]
+}

@@ -14,12 +14,30 @@ that behavior. Choose the model and learning method through bounded development;
 the starting target is concrete, not a commitment to one optimizer or model size.
 Training only final patches or answers would not directly teach this procedure.
 
-**Status — 28 September 2026:** the user authorized a bounded experimental
-continuation of this existing study. The pilot at `47e5b28` is retained as
-qualified development evidence; useful acquisition and fresh transfer remain
-unresolved. Start with [AGENTS.md](AGENTS.md), [CONTINUE.md](CONTINUE.md) and the
-[source guide](sources/README.md). The original [starting instruction](PROMPT.md)
-remains historical context. This update prepares the handoff; it starts no run.
+**Status — 28 September 2026, continuation executed:** 12 development episodes
+and 32 new LoRA updates establish a narrower result: useful code repair can occur
+without acquisition of the intended investigation procedure. Both base and pilot
+adapter repaired limit-zero behavior, but neither completed the rename or strict
+filter repair. A new correction-trained adapter repaired the strict filter only
+from an injected recorded prefix; it skipped the distinguishing probe and failed
+autonomously. Four on-policy bridge updates shifted behavior to repeated probes
+without repair. Fresh transfer remains untested.
+
+The [continuation report](evidence/continuation-02/README.md) links raw attempts,
+executed teacher corrections, adapters, bounded contract checks, verified full
+history parity, load/reset checks and native costs. All results are development;
+the original pilot remains unchanged. The [protocol](protocol/continuation-v2.md)
+records prospective budgets and adaptive decisions. The phase closes on a local
+acquisition limitation, not a neural win: the next useful work is reliable use of
+source and execution feedback before a fresh transfer comparison. CC1 remains
+unresolved; CC2 and CC3 remain untested.
+
+The commissioned question and [continuation instruction](CONTINUE.md) remain
+active research context. The investigator's requested policy is OpenAI
+`gpt-6-astra`; this session did not expose backend identity or actual reasoning
+setting, so those are recorded as unverified. Starting revision was
+`121242ca597c607f06d9f9084d88b1fa90a458ff`; code/artifact hashes are in the
+[phase manifest](evidence/continuation-02/artifact-manifest.json).
 
 Root's review found that neither branch arm edited its program, and both smaller
 repairs violated the explicit boolean-only contract despite passing their original
@@ -28,7 +46,7 @@ their full records. Thus the original completion interpretation below is qualifi
 changed weights and reported reset probes do not establish complete acquisition.
 See the [pinned root assessment](https://github.com/alignment-farm/construct-2/blob/c6aebb4422134b4529d4226aa3a6788367fb5973/studies/2026-09-21-experience-investigation-findings.md).
 
-## Pilot result as originally reported
+## Pilot result as originally reported (preserved)
 
 The following summary preserves the initial publication's interpretation. Read
 it with the root qualifications above and in [CONTINUE.md](CONTINUE.md); original

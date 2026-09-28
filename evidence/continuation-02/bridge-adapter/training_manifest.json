@@ -1,0 +1,9 @@
+{
+  "rows": [
+    {
+      "id": "bridge-read-to-probe",
+      "input_tokens": 2436,
+      "supervised_tokens": 99
+    }
+  ]
+}

@@ -117,3 +117,16 @@ Handoff prepared by Construct-2 root from `c6aebb4422134b4529d4226aa3a6788367fb5
 `gpt-6-astra`, reasoning `xhigh`, OpenAI, Codex Desktop `0.158.0-alpha.2.1`.
 Record the next investigator's actual settings separately. This preparation
 changes documentation only and runs no participant, teacher or training jobs.
+
+## Execution update — 28 September 2026
+
+The bounded continuation is now recorded in
+[evidence/continuation-02/README.md](evidence/continuation-02/README.md). Preserve
+its 12 development episodes, two new adapters (32 updates total), full histories,
+executed corrections and conditional-prefix diagnosis. Acquisition remains
+incomplete: strict repair works from an injected prefix, but autonomous read/probe
+use fails. A prepared later reject extension has not been participant-evaluated.
+The next useful step is to develop reliable action selection and use of feedback
+from these actual failed states, or revise the model/interface, before interpreting
+transfer. Recheck resource availability and declare a new bounded budget before
+expansion. This phase's closure does not retire the commissioned question.

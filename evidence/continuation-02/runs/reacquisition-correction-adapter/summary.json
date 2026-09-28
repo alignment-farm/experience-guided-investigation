@@ -1,0 +1,8 @@
+{
+  "status": "turn_limit",
+  "turns": 12,
+  "tool_calls": 12,
+  "seconds": 80.7641107919626,
+  "peak_mlx_bytes": 4631985252,
+  "source_hash": "ea94299bc4462b272b46123fbed87178e711d8daf282eb72b57f2bc61c951dce"
+}

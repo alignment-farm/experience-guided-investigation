@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "live_loaded_hash_matches_saved": true,
+    "base_unchanged": true,
+    "restored_state_hash_matches_initial": true,
+    "observed_generations_restored": true,
+    "adapter_changes_at_least_one_output": true
+  },
+  "passed": true,
+  "base_outputs": [
+    "READY",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"name\":\"filter\",\"predicate\":\"row.value > 0\"}]},{\"dataset\":[{\"row\":{\"value\":5}},{\"row\":{\"value\":-1}}]},\"expected\":{\"dataset\":[{\"row\":{\"value\":5}}]}}",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"op\":\"filter\",\"where\":\"row['x'] > 0\"}]}},\"expected\":\"{\\\"status\\\":\\\"ok\\\",\\\"data\\\":[{\\\"x\\\":1,\\\"y\\\":2}]}\"}"
+  ],
+  "adapted_outputs": [
+    "READY",
+    "{\"action\":\"read\",\"path\":\"etl_pipeline.py\",\"start\":100,\"limit\":100}",
+    "{\"action\":\"read\",\"path\":\"etl_pipeline.py\",\"start\":100,\"limit\":100}"
+  ],
+  "restored_outputs": [
+    "READY",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"name\":\"filter\",\"predicate\":\"row.value > 0\"}]},{\"dataset\":[{\"row\":{\"value\":5}},{\"row\":{\"value\":-1}}]},\"expected\":{\"dataset\":[{\"row\":{\"value\":5}}]}}",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"op\":\"filter\",\"where\":\"row['x'] > 0\"}]}},\"expected\":\"{\\\"status\\\":\\\"ok\\\",\\\"data\\\":[{\\\"x\\\":1,\\\"y\\\":2}]}\"}"
+  ],
+  "loaded_hash": "e7202f83321f2cacca1a58cd6626a2a497b970a8c41f983e0cfafbfb72be376f",
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "seconds": 15.371456916967873,
+  "peak_mlx_bytes": 3529811048,
+  "boundary": "Each generation uses a fresh prompt cache; explicit adapter reset checked against actual observed base outputs, not a presumed READY answer. Maintenance episodes additionally use separate OS processes."
+}

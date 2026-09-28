@@ -1,0 +1,13 @@
+{
+  "claim": "Bounded near-transfer of strict predicate investigation after filter correction; no independent-history or official benchmark claim.",
+  "selection": "One fixed 28-update adapter; no selection on fresh outcomes.",
+  "initial_workspace": "Common correct checkpoint-2 source, all eligible earlier attempts/correction history, original public tests; both arms byte matched.",
+  "hashes": {
+    "evidence/continuation-02/fresh-examiner/requirement.txt": "19d6521c2fa0e9fff73bfb7f17863efe5e405baae69a03cad6458b14c3472c78",
+    "evidence/continuation-02/fresh-examiner/cases.json": "02fa8ae23414aeb2da6a4199cdddf5b68ba17d8f78d1ce95fdc12f6b49e2bc96",
+    "evidence/continuation-02/correction-adapter/adapter.safetensors": "b175800f728df35e8c3af54103ee45b9a4ee641e7a266d01fad4576bce29b7fd",
+    "scripts/continuation_agent.py": "cc3d5cefe0ee7c5dd39a6a904f13c56b7f122989c51d9ca3c029870a5ef1dc43",
+    "scripts/continuation_runtime.py": "f314fc0a4275f8c8fd071e9a4283254ab55110d61b572e4f33d27cafc18f2b35",
+    "scripts/continuation_fresh.py": "14ee5134231da8195a679b1c77f863a55973978353680f8d4a19450c175baaf6"
+  }
+}

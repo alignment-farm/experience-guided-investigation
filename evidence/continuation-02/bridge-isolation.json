@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "live_loaded_hash_matches_saved": true,
+    "base_unchanged": true,
+    "restored_state_hash_matches_initial": true,
+    "observed_generations_restored": true,
+    "adapter_changes_at_least_one_output": true
+  },
+  "passed": true,
+  "base_outputs": [
+    "READY",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"name\":\"filter\",\"predicate\":\"row.value > 0\"}]},{\"dataset\":[{\"row\":{\"value\":5}},{\"row\":{\"value\":-1}}]},\"expected\":{\"dataset\":[{\"row\":{\"value\":5}}]}}",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"op\":\"filter\",\"where\":\"row['x'] > 0\"}]}},\"expected\":\"{\\\"status\\\":\\\"ok\\\",\\\"data\\\":[{\\\"x\\\":1,\\\"y\\\":2}]}\"}"
+  ],
+  "adapted_outputs": [
+    "READY",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"name\":\"filter','predicate': 'flag === 1'}]},\"dataset\":[{\"id\":0,\"flag\":1},{\"id\":1,\"flag\":0}]},\"expected\":{\"dataset\":[{\"id\":0}]},\"message\":\"probe now retains only true\" }",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"op\":\"filter\",\"where\":\"flag\"}]},\"expected\":{\"status\":\"ok\",\"data\":[]},\"flag\":\"boolean\"} }"
+  ],
+  "restored_outputs": [
+    "READY",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"name\":\"filter\",\"predicate\":\"row.value > 0\"}]},{\"dataset\":[{\"row\":{\"value\":5}},{\"row\":{\"value\":-1}}]},\"expected\":{\"dataset\":[{\"row\":{\"value\":5}}]}}",
+    "{\"action\":\"probe\",\"payload\":{\"pipeline\":{\"steps\":[{\"op\":\"filter\",\"where\":\"row['x'] > 0\"}]}},\"expected\":\"{\\\"status\\\":\\\"ok\\\",\\\"data\\\":[{\\\"x\\\":1,\\\"y\\\":2}]}\"}"
+  ],
+  "loaded_hash": "1667b6b3133c081da1d79a95e1475f13c475ed032dbb617b370f50fd3118bf6e",
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "seconds": 15.842409875011072,
+  "peak_mlx_bytes": 3529811048,
+  "boundary": "Each generation uses a fresh prompt cache; explicit adapter reset checked against actual observed base outputs, not a presumed READY answer. Maintenance episodes additionally use separate OS processes."
+}

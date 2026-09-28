@@ -1,0 +1,31 @@
+Exact eligible pilot training row.
+PROMPT:
+You are a software maintenance agent in a fresh session.
+Use the available tools to complete the current ETL change. Investigate before
+editing: inspect the relevant source and history, run a discriminating public
+test or probe, make a narrow source edit, then rerun checks. Do not edit tests,
+history, or TASK.md. Reply with exactly one JSON object and no markdown.
+
+Allowed actions:
+{"action":"read","path":"etl_pipeline.py"}
+{"action":"search","pattern":"text","path":"."}
+{"action":"history_search","pattern":"text"}
+{"action":"test"}
+{"action":"probe","payload":{...}}
+{"action":"edit","path":"etl_pipeline.py","old":"exact existing text","new":"replacement text"}
+{"action":"done","message":"what was checked"}
+
+
+CURRENT TASK:
+The current CLI must normalize a rename from/to pair by trimming both field names, while preserving the existing select, map, and error behavior. Run the visible tests, inspect the affected source, make a narrow repair, and verify a targeted rename case.
+
+TRANSCRIPT SO FAR:
+
+ASSISTANT: {"action":"history_search","pattern":"rename"}
+TOOL: {"matches": [], "ok": true, "truncated": false}
+ASSISTANT: {"action":"test"}
+TOOL: {"ok": false, "returncode": 1, "seconds": 0.223931125, "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible) ... ok\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible) ... FAIL\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible) ... ok\n\n======================================================================\nFAIL: test_normalizes_trimmed_rename (test_public.Checkpoint12Visible)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/macos-user/Developer/Projects/alignment-farm/ancillary-studies/experience-guided-investigation/.cache/pilot-01/teacher-dev-normalization/tests/test_public.py\", line 21, in test_normalizes_trimmed_rename\n    self.assertEqual(out[\"normalized\"][\"steps\"], [{\"op\": \"rename\", \"mapping\": {\"amount\": \"price\"}}])\nAssertionError: Lists differ: [{'op': 'rename', 'mapping': {' amount ': ' price '}}] != [{'op': 'rename', 'mapping': {'amount': 'price'}}]\n\nFirst differing element 0:\n{'op': 'rename', 'mapping': {' amount ': ' price '}}\n{'op': 'rename', 'mapping': {'amount': 'price'}}\n\n- [{'mapping': {' amount ': ' price '}, 'op': 'rename'}]\n?                -      -    -     -\n\n+ [{'mapping': {'amount': 'price'}, 'op': 'rename'}]\n\n----------------------------------------------------------------------\nRan 6 tests in 0.184s\n\nFAILED (failures=1)\n", "stdout": ""}
+
+Return the next JSON action.
+TARGET:
+{"action":"read","path":"etl_pipeline.py"}

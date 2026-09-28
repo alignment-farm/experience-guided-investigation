@@ -1,0 +1,31 @@
+{"kind": "provenance", "elapsed": 2.7604649160057306, "python": "3.14.7", "packages": {"mlx": "0.32.2", "mlx-lm": "0.32.0", "transformers": "5.17.0"}, "model": "/Users/macos-user/Developer/Projects/alignment-farm/ancillary-studies/weight-consolidation/models/qwen3-4b-4bit", "rows": 7, "epochs": 4, "seed": 17, "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141", "initial_adapter_hash": "2c9040b54f180be58b4b992e37f6fe7c0c6bbc65f74457c2194413796e38eb7f", "trainable_parameters": 655360}
+{"kind": "prepared", "elapsed": 2.8026952910004184, "input_tokens": 16349, "supervised_tokens": 347}
+{"kind": "train_step", "elapsed": 7.528363207995426, "epoch": 0, "row": "correction-3", "step": 1, "loss": 3.8125, "seconds": 4.724373749981169}
+{"kind": "train_step", "elapsed": 8.062982333009131, "epoch": 0, "row": "learner-prefix-0", "step": 2, "loss": 0.2734375, "seconds": 0.5300472499802709}
+{"kind": "train_step", "elapsed": 10.958329749992117, "epoch": 0, "row": "learner-prefix-1", "step": 3, "loss": 0.45703125, "seconds": 2.8907973330351524}
+{"kind": "train_step", "elapsed": 16.19212120800512, "epoch": 0, "row": "correction-4", "step": 4, "loss": 5.21875, "seconds": 5.2285192079725675}
+{"kind": "train_step", "elapsed": 20.1874872079934, "epoch": 0, "row": "correction-0", "step": 5, "loss": 1.078125, "seconds": 3.9909904999658465}
+{"kind": "train_step", "elapsed": 24.51537641597679, "epoch": 0, "row": "correction-1", "step": 6, "loss": 0.08740234375, "seconds": 4.325181208958384}
+{"kind": "train_step", "elapsed": 29.076953208015766, "epoch": 0, "row": "correction-2", "step": 7, "loss": 0.11181640625, "seconds": 4.556893290951848}
+{"kind": "train_step", "elapsed": 31.97523291601101, "epoch": 1, "row": "learner-prefix-1", "step": 8, "loss": 0.1328125, "seconds": 2.892800375004299}
+{"kind": "train_step", "elapsed": 36.301396082970314, "epoch": 1, "row": "correction-1", "step": 9, "loss": 0.07568359375, "seconds": 4.319956665975042}
+{"kind": "train_step", "elapsed": 36.83243399998173, "epoch": 1, "row": "learner-prefix-0", "step": 10, "loss": 0.07275390625, "seconds": 0.5261223330162466}
+{"kind": "train_step", "elapsed": 40.81193195801461, "epoch": 1, "row": "correction-0", "step": 11, "loss": 0.69921875, "seconds": 3.9750067919958383}
+{"kind": "train_step", "elapsed": 45.353883625008166, "epoch": 1, "row": "correction-2", "step": 12, "loss": 0.0439453125, "seconds": 4.538667290995363}
+{"kind": "train_step", "elapsed": 50.071309999970254, "epoch": 1, "row": "correction-3", "step": 13, "loss": 0.25390625, "seconds": 4.712611125025433}
+{"kind": "train_step", "elapsed": 55.30630579101853, "epoch": 1, "row": "correction-4", "step": 14, "loss": 2.796875, "seconds": 5.232409749994986}
+{"kind": "train_step", "elapsed": 55.83367866597837, "epoch": 2, "row": "learner-prefix-0", "step": 15, "loss": 0.07861328125, "seconds": 0.524764999980107}
+{"kind": "train_step", "elapsed": 61.04962816601619, "epoch": 2, "row": "correction-4", "step": 16, "loss": 1.3515625, "seconds": 5.2120037080021575}
+{"kind": "train_step", "elapsed": 65.58191358298063, "epoch": 2, "row": "correction-2", "step": 17, "loss": 0.05078125, "seconds": 4.529036332969554}
+{"kind": "train_step", "elapsed": 69.55543833301635, "epoch": 2, "row": "correction-0", "step": 18, "loss": 0.462890625, "seconds": 3.969241124985274}
+{"kind": "train_step", "elapsed": 74.28120675001992, "epoch": 2, "row": "correction-3", "step": 19, "loss": 0.453125, "seconds": 4.723765209026169}
+{"kind": "train_step", "elapsed": 78.59229112497997, "epoch": 2, "row": "correction-1", "step": 20, "loss": 0.0103759765625, "seconds": 4.307814749947283}
+{"kind": "train_step", "elapsed": 81.50559683301253, "epoch": 2, "row": "learner-prefix-1", "step": 21, "loss": 0.19921875, "seconds": 2.9096767919836566}
+{"kind": "train_step", "elapsed": 86.03848608297994, "epoch": 3, "row": "correction-2", "step": 22, "loss": 0.04541015625, "seconds": 4.527559249952901}
+{"kind": "train_step", "elapsed": 86.57313829101622, "epoch": 3, "row": "learner-prefix-0", "step": 23, "loss": 0.0201416015625, "seconds": 0.5300446670153178}
+{"kind": "train_step", "elapsed": 90.54541095800232, "epoch": 3, "row": "correction-0", "step": 24, "loss": 0.369140625, "seconds": 3.968086582957767}
+{"kind": "train_step", "elapsed": 93.45071666600415, "epoch": 3, "row": "learner-prefix-1", "step": 25, "loss": 0.005950927734375, "seconds": 2.9014262499986216}
+{"kind": "train_step", "elapsed": 97.77284175000386, "epoch": 3, "row": "correction-1", "step": 26, "loss": 0.0068359375, "seconds": 4.317645582952537}
+{"kind": "train_step", "elapsed": 103.00425825000275, "epoch": 3, "row": "correction-4", "step": 27, "loss": 1.640625, "seconds": 5.225944374979008}
+{"kind": "train_step", "elapsed": 107.71946233301423, "epoch": 3, "row": "correction-3", "step": 28, "loss": 0.050537109375, "seconds": 4.712502583977766}
+{"kind": "complete", "elapsed": 109.38842995796585, "status": "complete", "steps": 28, "epochs": 4, "rows": 7, "loss_first": 3.8125, "loss_last": 0.050537109375, "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141", "initial_adapter_hash": "2c9040b54f180be58b4b992e37f6fe7c0c6bbc65f74457c2194413796e38eb7f", "trained_adapter_hash": "e7202f83321f2cacca1a58cd6626a2a497b970a8c41f983e0cfafbfb72be376f", "adapter_bytes": 2624893, "seconds": 109.38812045799568, "peak_mlx_bytes": 13086098982}

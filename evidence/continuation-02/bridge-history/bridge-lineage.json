@@ -1,0 +1,9 @@
+{
+  "source": "evidence/continuation-02/runs/reacquisition-correction-adapter/events.jsonl",
+  "source_sha256": "2a8d3d04b249b3702ee5945193bcc2e2c965aba33fda2b036482582f7175f66e",
+  "turn": 2,
+  "initial_adapter": "correction-adapter/adapter.safetensors",
+  "intervention": "Replace actual learner read with executed mixed-type probe; one row, four updates, no other new targets.",
+  "authorship": "investigator target reuses previously executed correction probe",
+  "selection": "on-policy development loop; no fresh outcomes"
+}

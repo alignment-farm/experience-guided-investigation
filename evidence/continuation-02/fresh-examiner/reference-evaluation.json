@@ -1,0 +1,1180 @@
+{
+  "new_cases": [
+    {
+      "case": {
+        "name": "reject_mixed_types",
+        "steps": [
+          {
+            "op": "reject",
+            "where": "flag"
+          }
+        ],
+        "rows": [
+          {
+            "id": "r0",
+            "flag": true
+          },
+          {
+            "id": "r1",
+            "flag": false
+          },
+          {
+            "id": "r2",
+            "flag": 1
+          },
+          {
+            "id": "r3",
+            "flag": 0
+          },
+          {
+            "id": "r4",
+            "flag": -3
+          },
+          {
+            "id": "r5",
+            "flag": 2.25
+          },
+          {
+            "id": "r6",
+            "flag": "keep"
+          },
+          {
+            "id": "r7",
+            "flag": ""
+          },
+          {
+            "id": "r8",
+            "flag": null
+          },
+          {
+            "id": "r9",
+            "flag": []
+          },
+          {
+            "id": "r10",
+            "flag": {}
+          },
+          {
+            "id": "missing"
+          }
+        ],
+        "expected": [
+          {
+            "id": "r1",
+            "flag": false
+          },
+          {
+            "id": "r2",
+            "flag": 1
+          },
+          {
+            "id": "r3",
+            "flag": 0
+          },
+          {
+            "id": "r4",
+            "flag": -3
+          },
+          {
+            "id": "r5",
+            "flag": 2.25
+          },
+          {
+            "id": "r6",
+            "flag": "keep"
+          },
+          {
+            "id": "r7",
+            "flag": ""
+          },
+          {
+            "id": "r8",
+            "flag": null
+          },
+          {
+            "id": "r9",
+            "flag": []
+          },
+          {
+            "id": "r10",
+            "flag": {}
+          },
+          {
+            "id": "missing"
+          }
+        ]
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "id": "r1",
+            "flag": false
+          },
+          {
+            "id": "r2",
+            "flag": 1
+          },
+          {
+            "id": "r3",
+            "flag": 0
+          },
+          {
+            "id": "r4",
+            "flag": -3
+          },
+          {
+            "id": "r5",
+            "flag": 2.25
+          },
+          {
+            "id": "r6",
+            "flag": "keep"
+          },
+          {
+            "id": "r7",
+            "flag": ""
+          },
+          {
+            "id": "r8",
+            "flag": null
+          },
+          {
+            "id": "r9",
+            "flag": []
+          },
+          {
+            "id": "r10",
+            "flag": {}
+          },
+          {
+            "id": "missing"
+          }
+        ],
+        "metrics": {
+          "rows_in": 12,
+          "rows_out": 11
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_comparison",
+        "steps": [
+          {
+            "op": "reject",
+            "where": "score > 4"
+          }
+        ],
+        "rows": [
+          {
+            "score": 2
+          },
+          {
+            "score": 7
+          },
+          {
+            "score": 4
+          }
+        ],
+        "expected": [
+          {
+            "score": 2
+          },
+          {
+            "score": 4
+          }
+        ]
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "score": 2
+          },
+          {
+            "score": 4
+          }
+        ],
+        "metrics": {
+          "rows_in": 3,
+          "rows_out": 2
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_then_map_limit",
+        "steps": [
+          {
+            "op": "reject",
+            "where": "flag"
+          },
+          {
+            "op": "map",
+            "as": "copy",
+            "expr": "id"
+          },
+          {
+            "op": "limit",
+            "n": 2
+          }
+        ],
+        "rows": [
+          {
+            "id": "r0",
+            "flag": true
+          },
+          {
+            "id": "r1",
+            "flag": false
+          },
+          {
+            "id": "r2",
+            "flag": 1
+          },
+          {
+            "id": "r3",
+            "flag": 0
+          },
+          {
+            "id": "r4",
+            "flag": -3
+          },
+          {
+            "id": "r5",
+            "flag": 2.25
+          },
+          {
+            "id": "r6",
+            "flag": "keep"
+          },
+          {
+            "id": "r7",
+            "flag": ""
+          },
+          {
+            "id": "r8",
+            "flag": null
+          },
+          {
+            "id": "r9",
+            "flag": []
+          },
+          {
+            "id": "r10",
+            "flag": {}
+          },
+          {
+            "id": "missing"
+          }
+        ],
+        "expected": [
+          {
+            "id": "r1",
+            "flag": false,
+            "copy": "r1"
+          },
+          {
+            "id": "r2",
+            "flag": 1,
+            "copy": "r2"
+          }
+        ]
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "id": "r1",
+            "flag": false,
+            "copy": "r1"
+          },
+          {
+            "id": "r2",
+            "flag": 1,
+            "copy": "r2"
+          }
+        ],
+        "metrics": {
+          "rows_in": 12,
+          "rows_out": 2
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "filter_then_reject",
+        "steps": [
+          {
+            "op": "filter",
+            "where": "flag"
+          },
+          {
+            "op": "reject",
+            "where": "flag"
+          }
+        ],
+        "rows": [
+          {
+            "id": "r0",
+            "flag": true
+          },
+          {
+            "id": "r1",
+            "flag": false
+          },
+          {
+            "id": "r2",
+            "flag": 1
+          },
+          {
+            "id": "r3",
+            "flag": 0
+          },
+          {
+            "id": "r4",
+            "flag": -3
+          },
+          {
+            "id": "r5",
+            "flag": 2.25
+          },
+          {
+            "id": "r6",
+            "flag": "keep"
+          },
+          {
+            "id": "r7",
+            "flag": ""
+          },
+          {
+            "id": "r8",
+            "flag": null
+          },
+          {
+            "id": "r9",
+            "flag": []
+          },
+          {
+            "id": "r10",
+            "flag": {}
+          },
+          {
+            "id": "missing"
+          }
+        ],
+        "expected": []
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [],
+        "metrics": {
+          "rows_in": 12,
+          "rows_out": 0
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_empty",
+        "steps": [
+          {
+            "op": "reject",
+            "where": "flag"
+          }
+        ],
+        "rows": [],
+        "expected": []
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [],
+        "metrics": {
+          "rows_in": 0,
+          "rows_out": 0
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_error",
+        "steps": [
+          {
+            "op": "limit",
+            "n": 1
+          },
+          {
+            "op": "reject",
+            "where": "fn()"
+          }
+        ],
+        "rows": [
+          {}
+        ],
+        "error": "BAD_EXPR",
+        "path": "pipeline.steps[1].where"
+      },
+      "passed": true,
+      "actual": {
+        "status": "error",
+        "error_code": "BAD_EXPR",
+        "message": "ETL_ERROR: unsupported expression form",
+        "path": "pipeline.steps[1].where"
+      },
+      "returncode": 1,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_invalid_expression_type",
+        "steps": [
+          {
+            "op": "reject",
+            "where": 7
+          }
+        ],
+        "rows": [],
+        "error": "SCHEMA_VALIDATION_FAILED",
+        "path": "pipeline.steps[0].where"
+      },
+      "passed": true,
+      "actual": {
+        "status": "error",
+        "error_code": "SCHEMA_VALIDATION_FAILED",
+        "message": "ETL_ERROR: filter.where must be a non-empty string",
+        "path": "pipeline.steps[0].where"
+      },
+      "returncode": 1,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_blank",
+        "steps": [
+          {
+            "op": "reject",
+            "where": "  "
+          }
+        ],
+        "rows": [],
+        "error": "SCHEMA_VALIDATION_FAILED",
+        "path": "pipeline.steps[0].where"
+      },
+      "passed": true,
+      "actual": {
+        "status": "error",
+        "error_code": "SCHEMA_VALIDATION_FAILED",
+        "message": "ETL_ERROR: filter.where must be a non-empty string",
+        "path": "pipeline.steps[0].where"
+      },
+      "returncode": 1,
+      "stderr": ""
+    },
+    {
+      "case": {
+        "name": "reject_normalization",
+        "steps": [
+          {
+            "op": " REJECT ",
+            "where": " flag ",
+            "discard": "x"
+          }
+        ],
+        "rows": [],
+        "normalize": [
+          {
+            "op": "reject",
+            "where": "flag"
+          }
+        ]
+      },
+      "passed": true,
+      "actual": {
+        "status": "ok",
+        "normalized": {
+          "steps": [
+            {
+              "op": "reject",
+              "where": "flag"
+            }
+          ]
+        }
+      },
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "new_passed": 9,
+  "new_total": 9,
+  "preserved": {
+    "cases": [
+      {
+        "name": "filter_boolean_only",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "id": 0,
+              "flag": true
+            },
+            {
+              "id": 1,
+              "flag": false
+            },
+            {
+              "id": 2,
+              "flag": 1
+            },
+            {
+              "id": 3,
+              "flag": 0
+            },
+            {
+              "id": 4,
+              "flag": -2
+            },
+            {
+              "id": 5,
+              "flag": 1.5
+            },
+            {
+              "id": 6,
+              "flag": "yes"
+            },
+            {
+              "id": 7,
+              "flag": ""
+            },
+            {
+              "id": 8,
+              "flag": null
+            },
+            {
+              "id": 9
+            }
+          ]
+        },
+        "expected_data": [
+          {
+            "id": 0,
+            "flag": true
+          }
+        ],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 0,
+              "flag": true
+            }
+          ],
+          "metrics": {
+            "rows_in": 10,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_0",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": true
+            }
+          ]
+        },
+        "expected_data": [
+          {
+            "flag": true
+          }
+        ],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "flag": true
+            }
+          ],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_1",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": false
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_2",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": 1
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_3",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": 0
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_4",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": -2
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_5",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": 1.5
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_6",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": "yes"
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_7",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": ""
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_type_8",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "flag"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "flag": null
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_comparison",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "age > 30"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "age": 25
+            },
+            {
+              "age": 35
+            }
+          ]
+        },
+        "expected_data": [
+          {
+            "age": 35
+          }
+        ],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "age": 35
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "filter_error",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "filter",
+                "where": "fn()"
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "id": 1
+            }
+          ]
+        },
+        "expected_data": null,
+        "expected_error": "BAD_EXPR",
+        "expected_path": "pipeline.steps[0].where",
+        "actual": {
+          "status": "error",
+          "error_code": "BAD_EXPR",
+          "message": "ETL_ERROR: unsupported expression form",
+          "path": "pipeline.steps[0].where"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "name": "rename_trim",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "rename",
+                "from": " amount ",
+                "to": " price "
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "amount": 3
+            }
+          ]
+        },
+        "expected_data": [
+          {
+            "price": 3
+          }
+        ],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "price": 3
+            }
+          ],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "rename_invalid",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "rename",
+                "from": 3,
+                "to": "a"
+              }
+            ]
+          },
+          "dataset": []
+        },
+        "expected_data": null,
+        "expected_error": "SCHEMA_VALIDATION_FAILED",
+        "expected_path": "pipeline.steps[0].from",
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.from must be a non-empty string",
+          "path": "pipeline.steps[0].from"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "name": "limit_zero",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "limit",
+                "n": 0
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "id": 1
+            }
+          ]
+        },
+        "expected_data": [],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "limit_positive",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "limit",
+                "n": 1
+              }
+            ]
+          },
+          "dataset": [
+            {
+              "id": 1
+            },
+            {
+              "id": 2
+            }
+          ]
+        },
+        "expected_data": [
+          {
+            "id": 1
+          }
+        ],
+        "expected_error": null,
+        "expected_path": null,
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "id": 1
+            }
+          ],
+          "metrics": {
+            "rows_in": 2,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "name": "limit_boolean",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "limit",
+                "n": true
+              }
+            ]
+          },
+          "dataset": []
+        },
+        "expected_data": null,
+        "expected_error": "SCHEMA_VALIDATION_FAILED",
+        "expected_path": "pipeline.steps[0].n",
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: limit.n must be an integer >= 0",
+          "path": "pipeline.steps[0].n"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "name": "limit_negative",
+        "payload": {
+          "pipeline": {
+            "steps": [
+              {
+                "op": "limit",
+                "n": -1
+              }
+            ]
+          },
+          "dataset": []
+        },
+        "expected_data": null,
+        "expected_error": "SCHEMA_VALIDATION_FAILED",
+        "expected_path": "pipeline.steps[0].n",
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: limit.n must be an integer >= 0",
+          "path": "pipeline.steps[0].n"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      }
+    ],
+    "passed": 18,
+    "total": 18,
+    "public": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible.test_executes_map_filter_limit) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible.test_limit_zero_is_empty) ... ok\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible.test_missing_select_column_is_reported) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible.test_normalizes_and_drops_unknown_fields) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible.test_normalizes_trimmed_rename) ... ok\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible.test_rejects_unknown_operation) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.214s\n\nOK\n"
+    },
+    "complete": true
+  },
+  "complete": true
+}

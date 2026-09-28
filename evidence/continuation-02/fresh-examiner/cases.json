@@ -1,0 +1,345 @@
+[
+  {
+    "name": "reject_mixed_types",
+    "steps": [
+      {
+        "op": "reject",
+        "where": "flag"
+      }
+    ],
+    "rows": [
+      {
+        "id": "r0",
+        "flag": true
+      },
+      {
+        "id": "r1",
+        "flag": false
+      },
+      {
+        "id": "r2",
+        "flag": 1
+      },
+      {
+        "id": "r3",
+        "flag": 0
+      },
+      {
+        "id": "r4",
+        "flag": -3
+      },
+      {
+        "id": "r5",
+        "flag": 2.25
+      },
+      {
+        "id": "r6",
+        "flag": "keep"
+      },
+      {
+        "id": "r7",
+        "flag": ""
+      },
+      {
+        "id": "r8",
+        "flag": null
+      },
+      {
+        "id": "r9",
+        "flag": []
+      },
+      {
+        "id": "r10",
+        "flag": {}
+      },
+      {
+        "id": "missing"
+      }
+    ],
+    "expected": [
+      {
+        "id": "r1",
+        "flag": false
+      },
+      {
+        "id": "r2",
+        "flag": 1
+      },
+      {
+        "id": "r3",
+        "flag": 0
+      },
+      {
+        "id": "r4",
+        "flag": -3
+      },
+      {
+        "id": "r5",
+        "flag": 2.25
+      },
+      {
+        "id": "r6",
+        "flag": "keep"
+      },
+      {
+        "id": "r7",
+        "flag": ""
+      },
+      {
+        "id": "r8",
+        "flag": null
+      },
+      {
+        "id": "r9",
+        "flag": []
+      },
+      {
+        "id": "r10",
+        "flag": {}
+      },
+      {
+        "id": "missing"
+      }
+    ]
+  },
+  {
+    "name": "reject_comparison",
+    "steps": [
+      {
+        "op": "reject",
+        "where": "score > 4"
+      }
+    ],
+    "rows": [
+      {
+        "score": 2
+      },
+      {
+        "score": 7
+      },
+      {
+        "score": 4
+      }
+    ],
+    "expected": [
+      {
+        "score": 2
+      },
+      {
+        "score": 4
+      }
+    ]
+  },
+  {
+    "name": "reject_then_map_limit",
+    "steps": [
+      {
+        "op": "reject",
+        "where": "flag"
+      },
+      {
+        "op": "map",
+        "as": "copy",
+        "expr": "id"
+      },
+      {
+        "op": "limit",
+        "n": 2
+      }
+    ],
+    "rows": [
+      {
+        "id": "r0",
+        "flag": true
+      },
+      {
+        "id": "r1",
+        "flag": false
+      },
+      {
+        "id": "r2",
+        "flag": 1
+      },
+      {
+        "id": "r3",
+        "flag": 0
+      },
+      {
+        "id": "r4",
+        "flag": -3
+      },
+      {
+        "id": "r5",
+        "flag": 2.25
+      },
+      {
+        "id": "r6",
+        "flag": "keep"
+      },
+      {
+        "id": "r7",
+        "flag": ""
+      },
+      {
+        "id": "r8",
+        "flag": null
+      },
+      {
+        "id": "r9",
+        "flag": []
+      },
+      {
+        "id": "r10",
+        "flag": {}
+      },
+      {
+        "id": "missing"
+      }
+    ],
+    "expected": [
+      {
+        "id": "r1",
+        "flag": false,
+        "copy": "r1"
+      },
+      {
+        "id": "r2",
+        "flag": 1,
+        "copy": "r2"
+      }
+    ]
+  },
+  {
+    "name": "filter_then_reject",
+    "steps": [
+      {
+        "op": "filter",
+        "where": "flag"
+      },
+      {
+        "op": "reject",
+        "where": "flag"
+      }
+    ],
+    "rows": [
+      {
+        "id": "r0",
+        "flag": true
+      },
+      {
+        "id": "r1",
+        "flag": false
+      },
+      {
+        "id": "r2",
+        "flag": 1
+      },
+      {
+        "id": "r3",
+        "flag": 0
+      },
+      {
+        "id": "r4",
+        "flag": -3
+      },
+      {
+        "id": "r5",
+        "flag": 2.25
+      },
+      {
+        "id": "r6",
+        "flag": "keep"
+      },
+      {
+        "id": "r7",
+        "flag": ""
+      },
+      {
+        "id": "r8",
+        "flag": null
+      },
+      {
+        "id": "r9",
+        "flag": []
+      },
+      {
+        "id": "r10",
+        "flag": {}
+      },
+      {
+        "id": "missing"
+      }
+    ],
+    "expected": []
+  },
+  {
+    "name": "reject_empty",
+    "steps": [
+      {
+        "op": "reject",
+        "where": "flag"
+      }
+    ],
+    "rows": [],
+    "expected": []
+  },
+  {
+    "name": "reject_error",
+    "steps": [
+      {
+        "op": "limit",
+        "n": 1
+      },
+      {
+        "op": "reject",
+        "where": "fn()"
+      }
+    ],
+    "rows": [
+      {}
+    ],
+    "error": "BAD_EXPR",
+    "path": "pipeline.steps[1].where"
+  },
+  {
+    "name": "reject_invalid_expression_type",
+    "steps": [
+      {
+        "op": "reject",
+        "where": 7
+      }
+    ],
+    "rows": [],
+    "error": "SCHEMA_VALIDATION_FAILED",
+    "path": "pipeline.steps[0].where"
+  },
+  {
+    "name": "reject_blank",
+    "steps": [
+      {
+        "op": "reject",
+        "where": "  "
+      }
+    ],
+    "rows": [],
+    "error": "SCHEMA_VALIDATION_FAILED",
+    "path": "pipeline.steps[0].where"
+  },
+  {
+    "name": "reject_normalization",
+    "steps": [
+      {
+        "op": " REJECT ",
+        "where": " flag ",
+        "discard": "x"
+      }
+    ],
+    "rows": [],
+    "normalize": [
+      {
+        "op": "reject",
+        "where": "flag"
+      }
+    ]
+  }
+]
