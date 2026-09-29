@@ -1,0 +1,6 @@
+{
+  "reason": "First training step reported peak_mlx_bytes=19918929988, exceeding intended 12 GiB cap despite mx.set_memory_limit. Sent SIGINT to own PID14381; no neighbor changed.",
+  "steps_observed_before_interrupt": 1,
+  "budget_includes_completed_updates": true,
+  "adapter_not_used_for_claim": true
+}

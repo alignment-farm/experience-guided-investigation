@@ -1,0 +1,74 @@
+{
+  "submissions": {
+    "dev-filter-fresh-base-native": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-filter-fresh-base-v31": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-filter-fresh-base-v32": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-filter-fresh-coder-base": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-filter-fresh-ordinary-replay": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-filter-fresh-ordinary-served27": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-normalization-base-v32": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-normalization-coder-base": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "dev-normalization-ordinary-replay": {
+      "new_imports": [],
+      "new_call_names": [
+        "step['from'].strip",
+        "step['to'].strip"
+      ]
+    },
+    "dev-normalization-ordinary-served27": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "filter-native-tools-coder7": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "filter-native-tools-qwen4": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "joint-acquisition-learned": {
+      "new_imports": [],
+      "new_call_names": [
+        "step['from'].strip",
+        "step['to'].strip"
+      ]
+    },
+    "joint-acquisition-ordinary27": {
+      "new_imports": [],
+      "new_call_names": []
+    },
+    "joint-acquisition-ordinary4": {
+      "new_imports": [],
+      "new_call_names": [
+        "step['from'].strip",
+        "step['to'].strip"
+      ]
+    }
+  },
+  "boundary": "Direct read/search/restore paths are workspace-restricted. Python probe/test subprocesses are not independently OS-jailed; this inventory and full edit records support observed access audit, not an adversarial security proof. Future material is absent from supplied prompts/history. Inspect the listed changes and full edit records; an inventory alone is not proof against external I/O."
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "Adaptive first12-action development cutoff after repeated unchanged-history reads; ordinary4B control capped at12 prospectively.",
+  "executed_actions": 12,
+  "partial_next_generation": "Interrupted during next inference; unexecuted continuation not captured.",
+  "no_claim": "Not a completed20-action evaluation; eventual success with additional actions unknown."
+}

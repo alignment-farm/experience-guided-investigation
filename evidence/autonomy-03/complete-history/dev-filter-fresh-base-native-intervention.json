@@ -1,0 +1,8 @@
+{
+  "status": "investigator_stopped",
+  "reason": "Shared history_search emits bare filenames incompatible with read; broad search also expands context with duplicate records. Preserve partial run, fix retrieval paths/feedback, restart in fresh workspace.",
+  "completed_model_actions": 8,
+  "last_elapsed_seconds": 161.8526398750255,
+  "stopped_during_generation": "one interrupted action has unknown token cost",
+  "second_planned_episode": "not started"
+}

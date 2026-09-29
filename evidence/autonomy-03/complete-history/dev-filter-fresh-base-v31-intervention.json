@@ -1,0 +1,8 @@
+{
+  "status": "investigator_stopped",
+  "reason": "Repeated multi-action completions never execute under single-object parser. Replace only generation boundary with first-complete-object stopping; preserve partial outputs.",
+  "completed_model_actions": 3,
+  "last_elapsed_seconds": 100.44296795804985,
+  "interrupted_generation_tokens": "unknown",
+  "second_planned_episode": "not started"
+}

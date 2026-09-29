@@ -1,0 +1,443 @@
+{
+  "episodes": [
+    {
+      "name": "dev-filter-fresh-base-native",
+      "elapsed_seconds": 161.8526398750255,
+      "prompt_tokens": 94678,
+      "generated_tokens": 382,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 8,
+      "interrupted": true,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-filter-fresh-base-v31",
+      "elapsed_seconds": 100.44296795804985,
+      "prompt_tokens": 10032,
+      "generated_tokens": 1000,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 3,
+      "interrupted": true,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-filter-fresh-base-v32",
+      "elapsed_seconds": 18.95479612494819,
+      "prompt_tokens": 9156,
+      "generated_tokens": 40,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 2,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-filter-fresh-coder-base",
+      "elapsed_seconds": 34.87798683298752,
+      "prompt_tokens": 14297,
+      "generated_tokens": 58,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 3,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-filter-fresh-ordinary-replay",
+      "elapsed_seconds": 248.95471412496408,
+      "prompt_tokens": 123824,
+      "generated_tokens": 738,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 12,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-filter-fresh-ordinary-served27",
+      "elapsed_seconds": 497.84806504199514,
+      "prompt_tokens": 73152,
+      "generated_tokens": 3242,
+      "server_reported_cached_prompt_tokens": 57634,
+      "model_calls": 10,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-normalization-base-v32",
+      "elapsed_seconds": 58.985857959021814,
+      "prompt_tokens": 34329,
+      "generated_tokens": 172,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 5,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-normalization-coder-base",
+      "elapsed_seconds": 246.24022658303147,
+      "prompt_tokens": 121693,
+      "generated_tokens": 474,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 12,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-normalization-ordinary-replay",
+      "elapsed_seconds": 114.7401478329557,
+      "prompt_tokens": 57348,
+      "generated_tokens": 836,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 8,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "dev-normalization-ordinary-served27",
+      "elapsed_seconds": 535.3719231249997,
+      "prompt_tokens": 106718,
+      "generated_tokens": 3764,
+      "server_reported_cached_prompt_tokens": 92621,
+      "model_calls": 15,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "filter-native-tools-coder7",
+      "elapsed_seconds": 189.24428545800038,
+      "prompt_tokens": 37744,
+      "generated_tokens": 4270,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 7,
+      "interrupted": true,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "filter-native-tools-qwen4",
+      "elapsed_seconds": 189.52143125003204,
+      "prompt_tokens": 101984,
+      "generated_tokens": 564,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 11,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "joint-acquisition-learned",
+      "elapsed_seconds": 406.2196083329618,
+      "prompt_tokens": 215269,
+      "generated_tokens": 421,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 12,
+      "interrupted": true,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "joint-acquisition-ordinary27",
+      "elapsed_seconds": 387.1140437920112,
+      "prompt_tokens": 229774,
+      "generated_tokens": 3722,
+      "server_reported_cached_prompt_tokens": 201194,
+      "model_calls": 19,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    },
+    {
+      "name": "joint-acquisition-ordinary4",
+      "elapsed_seconds": 204.28779245796613,
+      "prompt_tokens": 137365,
+      "generated_tokens": 671,
+      "server_reported_cached_prompt_tokens": 0,
+      "model_calls": 11,
+      "interrupted": false,
+      "complete_record": true,
+      "token_boundary": "Local generation tokens or server-reported usage; server usage may include reasoning. Not directly comparable across models."
+    }
+  ],
+  "training_attempts": [
+    {
+      "name": "adapter",
+      "recorded_updates": 1,
+      "elapsed_seconds": 109.58744016702985,
+      "time_invalid_reason": null,
+      "budget_seconds": 109.58744016702985,
+      "peak_mlx_bytes": 19918929988,
+      "losses": [
+        {
+          "row": "dev-normalization-teacher-1",
+          "epoch": 0,
+          "loss": 1.296875
+        }
+      ]
+    },
+    {
+      "name": "adapter-cached",
+      "recorded_updates": 0,
+      "elapsed_seconds": null,
+      "time_invalid_reason": "Token-position variable overwrote timing start; use no logged duration for cost. Conservative budget charge60 seconds.",
+      "budget_seconds": 60,
+      "peak_mlx_bytes": 0,
+      "losses": []
+    },
+    {
+      "name": "adapter-cached-v2",
+      "recorded_updates": 46,
+      "elapsed_seconds": 706.2074053749675,
+      "time_invalid_reason": null,
+      "budget_seconds": 706.2074053749675,
+      "peak_mlx_bytes": 5704560486,
+      "losses": [
+        {
+          "row": "dev-normalization-teacher-1",
+          "epoch": 0,
+          "loss": 1.296875
+        },
+        {
+          "row": "dev-normalization-teacher-4",
+          "epoch": 0,
+          "loss": 4.34375
+        },
+        {
+          "row": "dev-filter-fresh-learner-2",
+          "epoch": 0,
+          "loss": 2.9375
+        },
+        {
+          "row": "dev-filter-fresh-learner-1",
+          "epoch": 0,
+          "loss": 2.59375
+        },
+        {
+          "row": "dev-normalization-learner-1",
+          "epoch": 0,
+          "loss": 2.640625
+        },
+        {
+          "row": "dev-filter-fresh-teacher-1",
+          "epoch": 0,
+          "loss": 4.21875
+        },
+        {
+          "row": "dev-filter-fresh-learner-9",
+          "epoch": 0,
+          "loss": 0.62890625
+        },
+        {
+          "row": "dev-normalization-teacher-0",
+          "epoch": 0,
+          "loss": 2.0
+        },
+        {
+          "row": "dev-normalization-teacher-5",
+          "epoch": 0,
+          "loss": 4.1875
+        },
+        {
+          "row": "dev-filter-fresh-learner-5",
+          "epoch": 0,
+          "loss": 1.0703125
+        },
+        {
+          "row": "dev-normalization-teacher-2",
+          "epoch": 0,
+          "loss": 0.64453125
+        },
+        {
+          "row": "dev-filter-fresh-learner-8",
+          "epoch": 0,
+          "loss": 0.5234375
+        },
+        {
+          "row": "dev-normalization-learner-4",
+          "epoch": 0,
+          "loss": 0.57421875
+        },
+        {
+          "row": "dev-filter-fresh-learner-0",
+          "epoch": 0,
+          "loss": 1.5
+        },
+        {
+          "row": "dev-normalization-learner-3",
+          "epoch": 0,
+          "loss": 1.046875
+        },
+        {
+          "row": "dev-filter-fresh-learner-3",
+          "epoch": 0,
+          "loss": 0.291015625
+        },
+        {
+          "row": "dev-filter-fresh-learner-10",
+          "epoch": 0,
+          "loss": 1.1328125
+        },
+        {
+          "row": "dev-filter-fresh-learner-7",
+          "epoch": 0,
+          "loss": 0.263671875
+        },
+        {
+          "row": "dev-normalization-teacher-3",
+          "epoch": 0,
+          "loss": 1.2890625
+        },
+        {
+          "row": "dev-normalization-learner-0",
+          "epoch": 0,
+          "loss": 1.2734375
+        },
+        {
+          "row": "dev-filter-fresh-teacher-0",
+          "epoch": 0,
+          "loss": 1.453125
+        },
+        {
+          "row": "dev-normalization-learner-2",
+          "epoch": 0,
+          "loss": 1.0234375
+        },
+        {
+          "row": "dev-normalization-learner-6",
+          "epoch": 0,
+          "loss": 0.46875
+        },
+        {
+          "row": "dev-filter-fresh-learner-0",
+          "epoch": 1,
+          "loss": 1.203125
+        },
+        {
+          "row": "dev-filter-fresh-teacher-0",
+          "epoch": 1,
+          "loss": 1.3203125
+        },
+        {
+          "row": "dev-filter-fresh-learner-2",
+          "epoch": 1,
+          "loss": 0.95703125
+        },
+        {
+          "row": "dev-normalization-learner-4",
+          "epoch": 1,
+          "loss": 0.46484375
+        },
+        {
+          "row": "dev-filter-fresh-learner-10",
+          "epoch": 1,
+          "loss": 0.89453125
+        },
+        {
+          "row": "dev-normalization-learner-1",
+          "epoch": 1,
+          "loss": 1.0390625
+        },
+        {
+          "row": "dev-filter-fresh-learner-7",
+          "epoch": 1,
+          "loss": 0.2177734375
+        },
+        {
+          "row": "dev-filter-fresh-learner-9",
+          "epoch": 1,
+          "loss": 0.2177734375
+        },
+        {
+          "row": "dev-normalization-learner-2",
+          "epoch": 1,
+          "loss": 0.91796875
+        },
+        {
+          "row": "dev-normalization-teacher-1",
+          "epoch": 1,
+          "loss": 0.4296875
+        },
+        {
+          "row": "dev-normalization-teacher-3",
+          "epoch": 1,
+          "loss": 0.984375
+        },
+        {
+          "row": "dev-filter-fresh-learner-1",
+          "epoch": 1,
+          "loss": 0.81640625
+        },
+        {
+          "row": "dev-normalization-learner-6",
+          "epoch": 1,
+          "loss": 0.392578125
+        },
+        {
+          "row": "dev-normalization-learner-0",
+          "epoch": 1,
+          "loss": 0.87109375
+        },
+        {
+          "row": "dev-normalization-learner-3",
+          "epoch": 1,
+          "loss": 0.7265625
+        },
+        {
+          "row": "dev-filter-fresh-learner-3",
+          "epoch": 1,
+          "loss": 0.201171875
+        },
+        {
+          "row": "dev-filter-fresh-teacher-1",
+          "epoch": 1,
+          "loss": 2.203125
+        },
+        {
+          "row": "dev-normalization-teacher-4",
+          "epoch": 1,
+          "loss": 1.0546875
+        },
+        {
+          "row": "dev-normalization-teacher-2",
+          "epoch": 1,
+          "loss": 0.33984375
+        },
+        {
+          "row": "dev-normalization-teacher-0",
+          "epoch": 1,
+          "loss": 0.91015625
+        },
+        {
+          "row": "dev-normalization-teacher-5",
+          "epoch": 1,
+          "loss": 2.359375
+        },
+        {
+          "row": "dev-filter-fresh-learner-8",
+          "epoch": 1,
+          "loss": 0.322265625
+        },
+        {
+          "row": "dev-filter-fresh-learner-5",
+          "epoch": 1,
+          "loss": 0.5703125
+        }
+      ]
+    }
+  ],
+  "recorded_updates": 47,
+  "episode_elapsed_seconds": 3394.6564867489506,
+  "training_budget_seconds": 875.7948455419973,
+  "isolation_seconds": 53.72404170798836,
+  "paid_participant_api_calls": 0,
+  "investigator_teacher_costs": "Unknown; eight executed correction actions and their raw traces disclosed, plus development diagnosis and shared interface implementation.",
+  "interpretation": "Elapsed costs include loading, tool execution and shared-machine contention; not exclusive device occupancy. No repayment claim. One interrupted full-gradient step may have begun additional uncommitted evaluation before termination.",
+  "conservative_serial_heavy_seconds": 4324.175373998936
+}

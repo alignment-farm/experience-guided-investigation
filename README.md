@@ -14,30 +14,37 @@ that behavior. Choose the model and learning method through bounded development;
 the starting target is concrete, not a commitment to one optimizer or model size.
 Training only final patches or answers would not directly teach this procedure.
 
-**Status — 28 September 2026, continuation executed:** 12 development episodes
-and 32 new LoRA updates establish a narrower result: useful code repair can occur
-without acquisition of the intended investigation procedure. Both base and pilot
-adapter repaired limit-zero behavior, but neither completed the rename or strict
-filter repair. A new correction-trained adapter repaired the strict filter only
-from an injected recorded prefix; it skipped the distinguishing probe and failed
-autonomously. Four on-policy bridge updates shifted behavior to repeated probes
-without repair. Fresh transfer remains untested.
+**Status — 28 September 2026, autonomous-action continuation:** competent
+ordinary reuse now completes both taught repairs and their joint task. The
+resident 27B reference used current failures, historical code, repairs and
+regression tests; its joint submission passes 18 original checks, ten fresh
+contract cases and the six public tests. This is a bounded competence result,
+not a general reliability rate.
 
-The [continuation report](evidence/continuation-02/README.md) links raw attempts,
-executed teacher corrections, adapters, bounded contract checks, verified full
-history parity, load/reset checks and native costs. All results are development;
-the original pilot remains unchanged. The [protocol](protocol/continuation-v2.md)
-records prospective budgets and adaptive decisions. The phase closes on a local
-acquisition limitation, not a neural win: the next useful work is reliable use of
-source and execution feedback before a fresh transfer comparison. CC1 remains
-unresolved; CC2 and CC3 remain untested.
+A new 46-update LoRA, trained on 15 learner actions and eight executed investigator
+corrections, did not demonstrate autonomous acquisition. In a matched 4B joint
+comparison, the learned arm spent twelve actions searching/reading without
+changing or testing current code (8/18 original checks; 3/10 new cases). Ordinary
+4B repaired filter but missed rename type validation and overstated completion
+(17/18; 5/10). The twelve-action cutoff was adaptive; the larger reference had a
+separate twenty-action allowance and finished in nineteen. No cross-model
+efficiency claim follows. The unfamiliar reject extension remains untested.
 
-The commissioned question and [continuation instruction](CONTINUE.md) remain
-active research context. The investigator's requested policy is OpenAI
-`gpt-6-astra`; this session did not expose backend identity or actual reasoning
-setting, so those are recorded as unverified. Starting revision was
-`121242ca597c607f06d9f9084d88b1fa90a458ff`; code/artifact hashes are in the
-[phase manifest](evidence/continuation-02/artifact-manifest.json).
+The [current report](evidence/autonomy-03/README.md) records all 15 participant
+episodes, failed training attempts, the saved adapter, complete source/history
+parity, load/reset checks, teacher work, confirmation cases and costs. The
+[protocol](protocol/autonomy-v3.md) discloses interface changes, the reconstructed
+protocol document and adaptive stopping. Native tools and reusable checks are
+shared infrastructure improvements, not effects of learned weights. The phase
+closes on explanatory progress and a local action-selection limitation. CC1
+remains unresolved; CC2 and CC3 remain untested.
+
+The [previous continuation](evidence/continuation-02/README.md), original pilot,
+failures and original evaluations are preserved. The commission and
+[continuation instruction](CONTINUE.md) remain active. This phase started at
+`523eb3fb8aa56fed0ffdfe10f6b1f1cb3002ade6`; the requested investigator policy was
+OpenAI `gpt-6-astra`, while actual backend identity and reasoning setting were not
+exposed. Exact versions, pins and interventions are in the current report.
 
 Root's review found that neither branch arm edited its program, and both smaller
 repairs violated the explicit boolean-only contract despite passing their original

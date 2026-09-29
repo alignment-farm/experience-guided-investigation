@@ -1,0 +1,21 @@
+[
+  {
+    "task": "dev-filter-fresh",
+    "source_sha256": "fb045b562d1adb41c9d5b2804472a17a90346ab52b7d07fa689ac3f4144c3720",
+    "masked_source_edit_turns": [
+      4,
+      6
+    ],
+    "teacher_actions": 2,
+    "interpretation": "Corrections based on actual development attempts; external development type failure informs rename diagnosis. No future material used. Past original clean_text implementation supports guard repair; no new examiner implementation exposed."
+  },
+  {
+    "task": "dev-normalization",
+    "source_sha256": "7571b37bb1f40b407aa61f6cad9fbec6bc35a72820b3874870b8837e85a45321",
+    "masked_source_edit_turns": [
+      5
+    ],
+    "teacher_actions": 6,
+    "interpretation": "Corrections based on actual development attempts; external development type failure informs rename diagnosis. No future material used. Past original clean_text implementation supports guard repair; no new examiner implementation exposed."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "status": "declared_done",
+  "turns": 5,
+  "tool_calls": 5,
+  "seconds": 58.98567066696705,
+  "peak_mlx_bytes": 4501863488,
+  "source_hash": "3560b75255a67ef7d67c361dbc068ba509526344336c7f614b726d72f7d7da42"
+}

@@ -130,3 +130,36 @@ The next useful step is to develop reliable action selection and use of feedback
 from these actual failed states, or revise the model/interface, before interpreting
 transfer. Recheck resource availability and declare a new bounded budget before
 expansion. This phase's closure does not retire the commissioned question.
+
+
+## Autonomous-action update — 28 September 2026
+
+The [next bounded phase](evidence/autonomy-03/README.md) is complete: 15 participant
+episodes, two executed teacher continuations, 46 saved-adapter updates plus one
+recorded discarded update, and about 72 minutes of recorded serial heavy work.
+Native function calls and ordinary replay/restore tools support complete behavior
+in the resident 27B reference, including the joint task. Whole eligible histories
+are shared and verified. Ten fresh contract cases confirm submitted behavior
+without entering participant or teacher access.
+
+The new learner-grounded LoRA still enters a read loop. Its first two actions and
+results match ordinary 4B; the third action selects an older transcript and leads
+to repeated retrieval. Ordinary 4B instead repairs filter, then misses rename type
+validation despite claiming success. The matched diagnostic uses an adaptive
+first-twelve-action cutoff; the separate 27B competence reference uses nineteen
+of twenty allowed actions. Preserve those distinctions, failed training attempts,
+raw traces and the unsolved acquisition gate. The reject extension remains unused.
+
+The best next experiment is a revised action-selection acquisition target at the
+observed transition from retrieved evidence to current execution: compare the
+present full-trajectory targets against supervision focused on corrective actions
+from actual stagnant/false-completion states, or first establish a stronger
+trainable learner. Keep competent native tools and ordinary code/test reuse.
+Do not simply add more copies of the same retrieval-heavy traces or call more
+unchanged reads acquisition. Collect new development attempts and freeze new
+confirmation material before judging a revised treatment. A full matched
+comparison needs a new declared budget; the one unused episode in this phase is
+not spent on an unpaired checkpoint retry. Future subprocess execution should also
+be independently filesystem/network-isolated; the current direct-tool boundary
+and submitted-code audit are not an adversarial sandbox proof. CC1 remains
+unresolved; CC2 and CC3 remain untested. The broader commission remains active.

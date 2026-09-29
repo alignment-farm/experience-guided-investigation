@@ -1,0 +1,618 @@
+{
+  "cases": [
+    {
+      "name": "new_filter_values",
+      "steps": [
+        {
+          "op": "filter",
+          "where": "eligible"
+        }
+      ],
+      "rows": [
+        {
+          "tag": "t",
+          "eligible": true
+        },
+        {
+          "tag": "f",
+          "eligible": false
+        },
+        {
+          "tag": "n",
+          "eligible": 42
+        },
+        {
+          "tag": "float",
+          "eligible": 1.0
+        },
+        {
+          "tag": "s",
+          "eligible": "true"
+        },
+        {
+          "tag": "a",
+          "eligible": [
+            1
+          ]
+        },
+        {
+          "tag": "o",
+          "eligible": {
+            "x": 1
+          }
+        },
+        {
+          "tag": "null",
+          "eligible": null
+        },
+        {
+          "tag": "absent"
+        }
+      ],
+      "expect": [
+        {
+          "tag": "t",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "name": "numeric_literal_not_boolean",
+      "steps": [
+        {
+          "op": "filter",
+          "where": "1"
+        }
+      ],
+      "rows": [
+        {
+          "z": 8
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "rename_filter_map_limit",
+      "steps": [
+        {
+          "op": "rename",
+          "from": " eligible ",
+          "to": " enabled "
+        },
+        {
+          "op": "filter",
+          "where": "enabled"
+        },
+        {
+          "op": "map",
+          "as": "copy",
+          "expr": "tag"
+        },
+        {
+          "op": "limit",
+          "n": 1
+        }
+      ],
+      "rows": [
+        {
+          "tag": "t",
+          "eligible": true
+        },
+        {
+          "tag": "f",
+          "eligible": false
+        },
+        {
+          "tag": "n",
+          "eligible": 42
+        },
+        {
+          "tag": "float",
+          "eligible": 1.0
+        },
+        {
+          "tag": "s",
+          "eligible": "true"
+        },
+        {
+          "tag": "a",
+          "eligible": [
+            1
+          ]
+        }
+      ],
+      "expect": [
+        {
+          "tag": "t",
+          "enabled": true,
+          "copy": "t"
+        }
+      ]
+    },
+    {
+      "name": "null_from",
+      "steps": [
+        {
+          "op": "rename",
+          "from": null,
+          "to": "b"
+        }
+      ],
+      "rows": [],
+      "error_code": "SCHEMA_VALIDATION_FAILED",
+      "error_path": "pipeline.steps[0].from"
+    },
+    {
+      "name": "integer_to",
+      "steps": [
+        {
+          "op": "rename",
+          "from": "a",
+          "to": 3
+        }
+      ],
+      "rows": [],
+      "error_code": "SCHEMA_VALIDATION_FAILED",
+      "error_path": "pipeline.steps[0].to"
+    },
+    {
+      "name": "boolean_to",
+      "steps": [
+        {
+          "op": "rename",
+          "from": "a",
+          "to": true
+        }
+      ],
+      "rows": [],
+      "error_code": "SCHEMA_VALIDATION_FAILED",
+      "error_path": "pipeline.steps[0].to"
+    },
+    {
+      "name": "array_from",
+      "steps": [
+        {
+          "op": "rename",
+          "from": [],
+          "to": "b"
+        }
+      ],
+      "rows": [],
+      "error_code": "SCHEMA_VALIDATION_FAILED",
+      "error_path": "pipeline.steps[0].from"
+    },
+    {
+      "name": "blank_to",
+      "steps": [
+        {
+          "op": "rename",
+          "from": "a",
+          "to": " \t "
+        }
+      ],
+      "rows": [],
+      "error_code": "SCHEMA_VALIDATION_FAILED",
+      "error_path": "pipeline.steps[0].to"
+    },
+    {
+      "name": "mapping_spaces_preserved",
+      "steps": [
+        {
+          "op": "rename",
+          "mapping": {
+            " a ": " b "
+          }
+        }
+      ],
+      "rows": [
+        {
+          " a ": 7
+        }
+      ],
+      "expect": [
+        {
+          " b ": 7
+        }
+      ]
+    },
+    {
+      "name": "rename_then_zero",
+      "steps": [
+        {
+          "op": "rename",
+          "from": " a ",
+          "to": " b "
+        },
+        {
+          "op": "limit",
+          "n": 0
+        }
+      ],
+      "rows": [
+        {
+          "a": 7
+        }
+      ],
+      "expect": []
+    }
+  ],
+  "script_sha256": "bce1acce2f885d9d262ba9ef5e7aeb43ad884009a899953a17c249024705695a",
+  "reference": {
+    "cases": [
+      {
+        "case": {
+          "name": "new_filter_values",
+          "steps": [
+            {
+              "op": "filter",
+              "where": "eligible"
+            }
+          ],
+          "rows": [
+            {
+              "tag": "t",
+              "eligible": true
+            },
+            {
+              "tag": "f",
+              "eligible": false
+            },
+            {
+              "tag": "n",
+              "eligible": 42
+            },
+            {
+              "tag": "float",
+              "eligible": 1.0
+            },
+            {
+              "tag": "s",
+              "eligible": "true"
+            },
+            {
+              "tag": "a",
+              "eligible": [
+                1
+              ]
+            },
+            {
+              "tag": "o",
+              "eligible": {
+                "x": 1
+              }
+            },
+            {
+              "tag": "null",
+              "eligible": null
+            },
+            {
+              "tag": "absent"
+            }
+          ],
+          "expect": [
+            {
+              "tag": "t",
+              "eligible": true
+            }
+          ]
+        },
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "tag": "t",
+              "eligible": true
+            }
+          ],
+          "metrics": {
+            "rows_in": 9,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "numeric_literal_not_boolean",
+          "steps": [
+            {
+              "op": "filter",
+              "where": "1"
+            }
+          ],
+          "rows": [
+            {
+              "z": 8
+            }
+          ],
+          "expect": []
+        },
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "rename_filter_map_limit",
+          "steps": [
+            {
+              "op": "rename",
+              "from": " eligible ",
+              "to": " enabled "
+            },
+            {
+              "op": "filter",
+              "where": "enabled"
+            },
+            {
+              "op": "map",
+              "as": "copy",
+              "expr": "tag"
+            },
+            {
+              "op": "limit",
+              "n": 1
+            }
+          ],
+          "rows": [
+            {
+              "tag": "t",
+              "eligible": true
+            },
+            {
+              "tag": "f",
+              "eligible": false
+            },
+            {
+              "tag": "n",
+              "eligible": 42
+            },
+            {
+              "tag": "float",
+              "eligible": 1.0
+            },
+            {
+              "tag": "s",
+              "eligible": "true"
+            },
+            {
+              "tag": "a",
+              "eligible": [
+                1
+              ]
+            }
+          ],
+          "expect": [
+            {
+              "tag": "t",
+              "enabled": true,
+              "copy": "t"
+            }
+          ]
+        },
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              "tag": "t",
+              "enabled": true,
+              "copy": "t"
+            }
+          ],
+          "metrics": {
+            "rows_in": 6,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "null_from",
+          "steps": [
+            {
+              "op": "rename",
+              "from": null,
+              "to": "b"
+            }
+          ],
+          "rows": [],
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "error_path": "pipeline.steps[0].from"
+        },
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.from must be a non-empty string",
+          "path": "pipeline.steps[0].from"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "integer_to",
+          "steps": [
+            {
+              "op": "rename",
+              "from": "a",
+              "to": 3
+            }
+          ],
+          "rows": [],
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "error_path": "pipeline.steps[0].to"
+        },
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.to must be a non-empty string",
+          "path": "pipeline.steps[0].to"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "boolean_to",
+          "steps": [
+            {
+              "op": "rename",
+              "from": "a",
+              "to": true
+            }
+          ],
+          "rows": [],
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "error_path": "pipeline.steps[0].to"
+        },
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.to must be a non-empty string",
+          "path": "pipeline.steps[0].to"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "array_from",
+          "steps": [
+            {
+              "op": "rename",
+              "from": [],
+              "to": "b"
+            }
+          ],
+          "rows": [],
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "error_path": "pipeline.steps[0].from"
+        },
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.from must be a non-empty string",
+          "path": "pipeline.steps[0].from"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "blank_to",
+          "steps": [
+            {
+              "op": "rename",
+              "from": "a",
+              "to": " \t "
+            }
+          ],
+          "rows": [],
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "error_path": "pipeline.steps[0].to"
+        },
+        "actual": {
+          "status": "error",
+          "error_code": "SCHEMA_VALIDATION_FAILED",
+          "message": "ETL_ERROR: rename.to must be a non-empty string",
+          "path": "pipeline.steps[0].to"
+        },
+        "passed": true,
+        "returncode": 1,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "mapping_spaces_preserved",
+          "steps": [
+            {
+              "op": "rename",
+              "mapping": {
+                " a ": " b "
+              }
+            }
+          ],
+          "rows": [
+            {
+              " a ": 7
+            }
+          ],
+          "expect": [
+            {
+              " b ": 7
+            }
+          ]
+        },
+        "actual": {
+          "status": "ok",
+          "data": [
+            {
+              " b ": 7
+            }
+          ],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 1
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "case": {
+          "name": "rename_then_zero",
+          "steps": [
+            {
+              "op": "rename",
+              "from": " a ",
+              "to": " b "
+            },
+            {
+              "op": "limit",
+              "n": 0
+            }
+          ],
+          "rows": [
+            {
+              "a": 7
+            }
+          ],
+          "expect": []
+        },
+        "actual": {
+          "status": "ok",
+          "data": [],
+          "metrics": {
+            "rows_in": 1,
+            "rows_out": 0
+          }
+        },
+        "passed": true,
+        "returncode": 0,
+        "stderr": ""
+      }
+    ],
+    "passed": 10,
+    "total": 10,
+    "complete": true
+  },
+  "selection": "Constructed from already stated contracts before joint acquisition outcomes; no participant or teacher access; not independent histories."
+}

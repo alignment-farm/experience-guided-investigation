@@ -1,0 +1,198 @@
+{
+  "filter_boolean_only": {
+    "before": {
+      "ok": true,
+      "application_ok": true,
+      "assertion_passed": false,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 0,
+            "flag": true
+          },
+          {
+            "id": 1,
+            "flag": 1
+          },
+          {
+            "id": 2,
+            "flag": "yes"
+          },
+          {
+            "id": 3,
+            "flag": false
+          }
+        ],
+        "metrics": {
+          "rows_in": 6,
+          "rows_out": 4
+        }
+      },
+      "expected_rows": [
+        {
+          "id": 0,
+          "flag": true
+        }
+      ],
+      "expected_error": null,
+      "returncode": 0,
+      "stderr": "",
+      "seconds": 0.037749583018012345,
+      "replayed_case_id": "filter_boolean_only",
+      "expectation_origin": "explicit expected result in the executed investigator correction; failed before strict edit and passed after"
+    },
+    "restored": {
+      "ok": true,
+      "restored_from": "history/teacher-repaired.py",
+      "written": "etl_pipeline.py",
+      "bytes": 9736,
+      "reminder": "CURRENT source changed; now run your distinguishing probe and regression tests."
+    },
+    "after": {
+      "ok": true,
+      "application_ok": true,
+      "assertion_passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 0,
+            "flag": true
+          }
+        ],
+        "metrics": {
+          "rows_in": 6,
+          "rows_out": 1
+        }
+      },
+      "expected_rows": [
+        {
+          "id": 0,
+          "flag": true
+        }
+      ],
+      "expected_error": null,
+      "returncode": 0,
+      "stderr": "",
+      "seconds": 0.03789658396271989,
+      "replayed_case_id": "filter_boolean_only",
+      "expectation_origin": "explicit expected result in the executed investigator correction; failed before strict edit and passed after"
+    },
+    "passed": true
+  },
+  "rename_trim": {
+    "before": {
+      "ok": false,
+      "application_ok": false,
+      "assertion_passed": false,
+      "actual": {
+        "status": "error",
+        "error_code": "MISSING_COLUMN",
+        "message": "ETL_ERROR: rename source ' amount ' not found in row",
+        "path": "pipeline.steps[0].mapping. amount "
+      },
+      "expected_rows": [
+        {
+          "price": 3
+        }
+      ],
+      "expected_error": null,
+      "returncode": 1,
+      "stderr": "",
+      "seconds": 0.03725879197008908,
+      "replayed_case_id": "rename_trim",
+      "expectation_origin": "recorded actual output of original executed teacher repair"
+    },
+    "restored": {
+      "ok": true,
+      "restored_from": "history/teacher-repaired.py",
+      "written": "etl_pipeline.py",
+      "bytes": 9736,
+      "reminder": "CURRENT source changed; now run your distinguishing probe and regression tests."
+    },
+    "after": {
+      "ok": true,
+      "application_ok": true,
+      "assertion_passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "price": 3
+          }
+        ],
+        "metrics": {
+          "rows_in": 1,
+          "rows_out": 1
+        }
+      },
+      "expected_rows": [
+        {
+          "price": 3
+        }
+      ],
+      "expected_error": null,
+      "returncode": 0,
+      "stderr": "",
+      "seconds": 0.0368301669950597,
+      "replayed_case_id": "rename_trim",
+      "expectation_origin": "recorded actual output of original executed teacher repair"
+    },
+    "passed": true
+  },
+  "limit_zero": {
+    "before": {
+      "ok": true,
+      "application_ok": true,
+      "assertion_passed": false,
+      "actual": {
+        "status": "ok",
+        "data": [
+          {
+            "id": 1
+          }
+        ],
+        "metrics": {
+          "rows_in": 1,
+          "rows_out": 1
+        }
+      },
+      "expected_rows": [],
+      "expected_error": null,
+      "returncode": 0,
+      "stderr": "",
+      "seconds": 0.03739075001794845,
+      "replayed_case_id": "limit_zero",
+      "expectation_origin": "recorded actual output of original executed teacher repair"
+    },
+    "restored": {
+      "ok": true,
+      "restored_from": "history/teacher-repaired.py",
+      "written": "etl_pipeline.py",
+      "bytes": 9736,
+      "reminder": "CURRENT source changed; now run your distinguishing probe and regression tests."
+    },
+    "after": {
+      "ok": true,
+      "application_ok": true,
+      "assertion_passed": true,
+      "actual": {
+        "status": "ok",
+        "data": [],
+        "metrics": {
+          "rows_in": 1,
+          "rows_out": 0
+        }
+      },
+      "expected_rows": [],
+      "expected_error": null,
+      "returncode": 0,
+      "stderr": "",
+      "seconds": 0.03688012500060722,
+      "replayed_case_id": "limit_zero",
+      "expectation_origin": "recorded actual output of original executed teacher repair"
+    },
+    "passed": true
+  }
+}

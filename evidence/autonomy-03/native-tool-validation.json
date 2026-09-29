@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "restore_rejects_outside_history": true,
+    "restore_copies_prior_source": true,
+    "history_unchanged": true,
+    "search_paths_readable": true,
+    "history_basename_resolves": true
+  },
+  "passed": true
+}

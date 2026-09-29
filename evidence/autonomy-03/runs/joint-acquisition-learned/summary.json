@@ -1,0 +1,7 @@
+{
+  "status": "investigator_stop_after_12_actions",
+  "turns": 12,
+  "tool_calls": 12,
+  "seconds": 406.2196083329618,
+  "source_hash": "0785c94f8416d3b25f9d865d90ce64305c48cc59c65885c87ff6dbcf0f94eab5"
+}

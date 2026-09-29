@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "first_call_only": true,
+    "incomplete_not_executed": true,
+    "filter_boolean_only_fails_before": true,
+    "filter_boolean_only_restore": true,
+    "filter_boolean_only_passes_after": true,
+    "filter_boolean_only_history_unchanged": true,
+    "filter_boolean_only_escape_rejected": true,
+    "rename_trim_fails_before": true,
+    "rename_trim_restore": true,
+    "rename_trim_passes_after": true,
+    "rename_trim_history_unchanged": true,
+    "rename_trim_escape_rejected": true,
+    "limit_zero_fails_before": true,
+    "limit_zero_restore": true,
+    "limit_zero_passes_after": true,
+    "limit_zero_history_unchanged": true,
+    "limit_zero_escape_rejected": true
+  },
+  "passed": true
+}

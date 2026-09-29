@@ -1,0 +1,7 @@
+{
+  "status": "investigator_stopped",
+  "reason": "Repeated identical prose sequences without native tool_call markers; no function executed. No success interpretation.",
+  "completed_model_actions": 7,
+  "last_elapsed_seconds": 189.24428545800038,
+  "interrupted_generation_tokens": "unknown"
+}

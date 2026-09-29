@@ -1,0 +1,98 @@
+{
+  "rename_trim": {
+    "action": {
+      "action": "probe",
+      "steps": [
+        {
+          "op": "rename",
+          "from": " amount ",
+          "to": " price "
+        }
+      ],
+      "rows": [
+        {
+          "amount": 3
+        }
+      ],
+      "expect": [
+        {
+          "price": 3
+        }
+      ]
+    },
+    "expectation_origin": "recorded actual output of original executed teacher repair",
+    "source": "evidence/pilot-01/acquisition/dev-normalization/events.jsonl",
+    "source_sha256": "d09f4413ffd99f3fa3aeee1272825ab099c7eb02ef451c354879e9cc6c0f16a2",
+    "source_turn": 5,
+    "full_record_in_workspace": "history/dev-normalization.txt"
+  },
+  "limit_zero": {
+    "action": {
+      "action": "probe",
+      "steps": [
+        {
+          "op": "limit",
+          "n": 0
+        }
+      ],
+      "rows": [
+        {
+          "id": 1
+        }
+      ],
+      "expect": []
+    },
+    "expectation_origin": "recorded actual output of original executed teacher repair",
+    "source": "evidence/pilot-01/acquisition/dev-execution/events.jsonl",
+    "source_sha256": "0af1c993585a831f631608b3b4ba62dd88c638cb260e6ffccd0b90bd468e9d3c",
+    "source_turn": 5,
+    "full_record_in_workspace": "history/dev-execution.txt"
+  },
+  "filter_boolean_only": {
+    "action": {
+      "action": "probe",
+      "steps": [
+        {
+          "op": "filter",
+          "where": "flag"
+        }
+      ],
+      "rows": [
+        {
+          "id": 0,
+          "flag": true
+        },
+        {
+          "id": 1,
+          "flag": 1
+        },
+        {
+          "id": 2,
+          "flag": "yes"
+        },
+        {
+          "id": 3,
+          "flag": false
+        },
+        {
+          "id": 4,
+          "flag": null
+        },
+        {
+          "id": 5
+        }
+      ],
+      "expect": [
+        {
+          "id": 0,
+          "flag": true
+        }
+      ]
+    },
+    "expectation_origin": "explicit expected result in the executed investigator correction; failed before strict edit and passed after",
+    "source": "evidence/continuation-02/correction/events.jsonl",
+    "source_sha256": "e9683adf50b7f5a9da88890d7320d3ae2b81ae7b78532f80e78f0d36d478fd76",
+    "source_turn": 3,
+    "full_record_in_workspace": "history/teacher-events.jsonl.txt"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "initial_messages_byte_equivalent_as_json": true,
+  "tool_schemas_equal": true,
+  "initial_source_hash_equal": true,
+  "shared_seed": true,
+  "prefix": [
+    {
+      "turn": 0,
+      "identical_action_and_result": true,
+      "learned_action": {
+        "action": "history_search",
+        "pattern": "filter_boolean_only"
+      },
+      "ordinary_action": {
+        "action": "history_search",
+        "pattern": "filter_boolean_only"
+      },
+      "learned_generated_tokens": 20,
+      "ordinary_generated_tokens": 20
+    },
+    {
+      "turn": 1,
+      "identical_action_and_result": true,
+      "learned_action": {
+        "action": "read",
+        "path": "history/CASES.json",
+        "start": 50,
+        "limit": 500
+      },
+      "ordinary_action": {
+        "action": "read",
+        "path": "history/CASES.json",
+        "start": 50,
+        "limit": 500
+      },
+      "learned_generated_tokens": 36,
+      "ordinary_generated_tokens": 36
+    },
+    {
+      "turn": 2,
+      "identical_action_and_result": false,
+      "learned_action": {
+        "action": "read",
+        "path": "history/teacher-events.jsonl.txt"
+      },
+      "ordinary_action": {
+        "action": "read",
+        "path": "history/correction-dev-filter-fresh-events.jsonl"
+      },
+      "learned_generated_tokens": 23,
+      "ordinary_generated_tokens": 27
+    }
+  ],
+  "first_observed_action_divergence": 2,
+  "boundary": "One fixed-seed development pair, adaptively bounded at12 actions. No cross-model or general reliability inference.",
+  "complete_history_unchanged_and_equal": {
+    "joint-acquisition-learned": true,
+    "joint-acquisition-ordinary4": true,
+    "joint-acquisition-ordinary27": true
+  }
+}

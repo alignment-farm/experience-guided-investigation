@@ -1,0 +1,31 @@
+Exact eligible pilot training row.
+PROMPT:
+You are a software maintenance agent in a fresh session.
+Use the available tools to complete the current ETL change. Investigate before
+editing: inspect the relevant source and history, run a discriminating public
+test or probe, make a narrow source edit, then rerun checks. Do not edit tests,
+history, or TASK.md. Reply with exactly one JSON object and no markdown.
+
+Allowed actions:
+{"action":"read","path":"etl_pipeline.py"}
+{"action":"search","pattern":"text","path":"."}
+{"action":"history_search","pattern":"text"}
+{"action":"test"}
+{"action":"probe","payload":{...}}
+{"action":"edit","path":"etl_pipeline.py","old":"exact existing text","new":"replacement text"}
+{"action":"done","message":"what was checked"}
+
+
+CURRENT TASK:
+The current CLI must execute a linear pipeline and honor limit n=0 by returning zero rows. Preserve the earlier normalization behavior. Use a visible test and a targeted probe to localize and verify the repair.
+
+TRANSCRIPT SO FAR:
+
+ASSISTANT: {"action":"history_search","pattern":"normalization"}
+TOOL: {"matches": ["dev-normalization.json:2:  \"task\": \"dev-normalization\","], "ok": true, "truncated": false}
+ASSISTANT: {"action":"test"}
+TOOL: {"ok": false, "returncode": 1, "seconds": 0.222774708, "stderr": "test_executes_map_filter_limit (test_public.Checkpoint12Visible) ... ok\ntest_limit_zero_is_empty (test_public.Checkpoint12Visible) ... FAIL\ntest_missing_select_column_is_reported (test_public.Checkpoint12Visible) ... ok\ntest_normalizes_and_drops_unknown_fields (test_public.Checkpoint12Visible) ... ok\ntest_normalizes_trimmed_rename (test_public.Checkpoint12Visible) ... ok\ntest_rejects_unknown_operation (test_public.Checkpoint12Visible) ... ok\n\n======================================================================\nFAIL: test_limit_zero_is_empty (test_public.Checkpoint12Visible)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/macos-user/Developer/Projects/alignment-farm/ancillary-studies/experience-guided-investigation/.cache/pilot-01/teacher-dev-execution/tests/test_public.py\", line 45, in test_limit_zero_is_empty\n    self.assertEqual(out[\"data\"], [])\nAssertionError: Lists differ: [{'id': 1}] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n{'id': 1}\n\n- [{'id': 1}]\n+ []\n\n----------------------------------------------------------------------\nRan 6 tests in 0.183s\n\nFAILED (failures=1)\n", "stdout": ""}
+
+Return the next JSON action.
+TARGET:
+{"action":"read","path":"etl_pipeline.py"}

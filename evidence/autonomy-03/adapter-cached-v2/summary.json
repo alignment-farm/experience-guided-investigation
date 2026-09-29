@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "rows": 23,
+  "epochs": 2,
+  "steps": 46,
+  "loss_first": 1.296875,
+  "loss_last": 0.5703125,
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "initial_adapter_hash": "2c9040b54f180be58b4b992e37f6fe7c0c6bbc65f74457c2194413796e38eb7f",
+  "trained_adapter_hash": "f61364fcbe5fe5a8af8a84bdc34ac381c22d81200988b50810aa5222ece2635d",
+  "adapter_bytes": 2624893,
+  "seconds": 706.2072259999695,
+  "peak_mlx_bytes": 5704560486,
+  "forward_equivalence": [
+    {
+      "case": "small",
+      "full_context_loss": 4.15625,
+      "cached_prefix_loss": 4.125,
+      "loss_abs_difference": 0.03125
+    },
+    {
+      "case": "full_row",
+      "full_context_loss": 5.3125,
+      "cached_prefix_loss": 5.3125,
+      "loss_abs_difference": 0.0
+    }
+  ],
+  "gradient_method": "recomputed stopped-prefix KV; suffix-only backprop"
+}

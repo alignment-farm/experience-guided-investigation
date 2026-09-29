@@ -1,0 +1,119 @@
+{
+  "rows": [
+    {
+      "id": "dev-filter-fresh-learner-0",
+      "input_tokens": 3835,
+      "supervised_tokens": 25
+    },
+    {
+      "id": "dev-filter-fresh-learner-1",
+      "input_tokens": 4918,
+      "supervised_tokens": 29
+    },
+    {
+      "id": "dev-filter-fresh-learner-2",
+      "input_tokens": 8235,
+      "supervised_tokens": 29
+    },
+    {
+      "id": "dev-filter-fresh-learner-3",
+      "input_tokens": 11011,
+      "supervised_tokens": 115
+    },
+    {
+      "id": "dev-filter-fresh-learner-5",
+      "input_tokens": 11309,
+      "supervised_tokens": 42
+    },
+    {
+      "id": "dev-filter-fresh-learner-7",
+      "input_tokens": 12063,
+      "supervised_tokens": 115
+    },
+    {
+      "id": "dev-filter-fresh-learner-8",
+      "input_tokens": 12280,
+      "supervised_tokens": 71
+    },
+    {
+      "id": "dev-filter-fresh-learner-9",
+      "input_tokens": 12425,
+      "supervised_tokens": 115
+    },
+    {
+      "id": "dev-filter-fresh-learner-10",
+      "input_tokens": 12574,
+      "supervised_tokens": 28
+    },
+    {
+      "id": "dev-filter-fresh-teacher-0",
+      "input_tokens": 12749,
+      "supervised_tokens": 20
+    },
+    {
+      "id": "dev-filter-fresh-teacher-1",
+      "input_tokens": 13018,
+      "supervised_tokens": 43
+    },
+    {
+      "id": "dev-normalization-learner-0",
+      "input_tokens": 3830,
+      "supervised_tokens": 27
+    },
+    {
+      "id": "dev-normalization-learner-1",
+      "input_tokens": 6502,
+      "supervised_tokens": 26
+    },
+    {
+      "id": "dev-normalization-learner-2",
+      "input_tokens": 6666,
+      "supervised_tokens": 28
+    },
+    {
+      "id": "dev-normalization-learner-3",
+      "input_tokens": 7586,
+      "supervised_tokens": 33
+    },
+    {
+      "id": "dev-normalization-learner-4",
+      "input_tokens": 7903,
+      "supervised_tokens": 59
+    },
+    {
+      "id": "dev-normalization-learner-6",
+      "input_tokens": 8477,
+      "supervised_tokens": 59
+    },
+    {
+      "id": "dev-normalization-teacher-0",
+      "input_tokens": 8655,
+      "supervised_tokens": 67
+    },
+    {
+      "id": "dev-normalization-teacher-1",
+      "input_tokens": 9161,
+      "supervised_tokens": 94
+    },
+    {
+      "id": "dev-normalization-teacher-2",
+      "input_tokens": 9258,
+      "supervised_tokens": 67
+    },
+    {
+      "id": "dev-normalization-teacher-3",
+      "input_tokens": 9410,
+      "supervised_tokens": 27
+    },
+    {
+      "id": "dev-normalization-teacher-4",
+      "input_tokens": 9567,
+      "supervised_tokens": 20
+    },
+    {
+      "id": "dev-normalization-teacher-5",
+      "input_tokens": 9844,
+      "supervised_tokens": 51
+    }
+  ]
+}

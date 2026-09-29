@@ -1,0 +1,21 @@
+{
+  "retained_history_stages": {
+    "history": {
+      "files": 51,
+      "bytes": 609643
+    },
+    "reuse-history": {
+      "files": 68,
+      "bytes": 1042380
+    },
+    "complete-history": {
+      "files": 105,
+      "bytes": 2729189
+    }
+  },
+  "model": "Pinned immutable base files reused read-only; new adapter only mutable learner parameters.",
+  "runtime": "Fresh process/model/conversation per MLX episode; no cross-episode KV cache. Server conversations reset client-side; server prompt caching cannot be excluded.",
+  "source_access": "Participant Environment exposes only its workspace, public tests and explicit history. Absolute paths and parent traversal rejected.",
+  "future": "Reject requirement and examiner excluded from every development archive.",
+  "teaching": "Full native training rows, real failed edit feedback, executed investigator corrections, final corrected programs, and ordinary replay checks available in complete-history."
+}

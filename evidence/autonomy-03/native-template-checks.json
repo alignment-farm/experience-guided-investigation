@@ -1,0 +1,15 @@
+{
+  "first_tool_not_later_done": true,
+  "qwen3-4b-4bit": {
+    "tool_declarations": true,
+    "tool_call": true,
+    "tool_response": true,
+    "assistant_generation_prefix": true
+  },
+  "qwen2.5-coder-7b-4bit": {
+    "tool_declarations": true,
+    "tool_call": true,
+    "tool_response": true,
+    "assistant_generation_prefix": true
+  }
+}

@@ -112,3 +112,7 @@ For the full root reading boundaries, see Construct-2's
 `sources/2026-09-17-runtime-study-selection/README.md`. They are contextual
 reading, not required orchestration. Record this study's own discoveries and
 inspection depth as its question develops.
+
+## Autonomous action continuation, 28 September 2026
+
+[Native dialogue/tools, pinned coder-model metadata, and bounded MLX memory diagnosis](autonomy-03/README.md). Inspected official chat-template/model/tool guidance and local pinned runtime implementations; separate local outcomes from discovery leads. No new arXiv queries were needed for these implementation uncertainties.

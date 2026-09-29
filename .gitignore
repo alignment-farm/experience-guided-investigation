@@ -25,3 +25,7 @@ secrets.json
 .agent/
 .claude/
 .DS_Store
+# Exact duplicate participant histories: hashes and retained object paths are in
+# evidence/autonomy-03/workspace-history-manifests.json.
+/evidence/autonomy-03/workspaces/*/history/
+/evidence/autonomy-03/acquisition/*/workspace/history/

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "dev-filter-fresh-learner-0",
+    "input": 3835,
+    "target": 25
+  },
+  {
+    "id": "dev-filter-fresh-learner-1",
+    "input": 4918,
+    "target": 29
+  },
+  {
+    "id": "dev-filter-fresh-learner-2",
+    "input": 8235,
+    "target": 29
+  },
+  {
+    "id": "dev-filter-fresh-learner-3",
+    "input": 11011,
+    "target": 115
+  },
+  {
+    "id": "dev-filter-fresh-learner-5",
+    "input": 11309,
+    "target": 42
+  },
+  {
+    "id": "dev-filter-fresh-learner-7",
+    "input": 12063,
+    "target": 115
+  },
+  {
+    "id": "dev-filter-fresh-learner-8",
+    "input": 12280,
+    "target": 71
+  },
+  {
+    "id": "dev-filter-fresh-learner-9",
+    "input": 12425,
+    "target": 115
+  },
+  {
+    "id": "dev-filter-fresh-learner-10",
+    "input": 12574,
+    "target": 28
+  },
+  {
+    "id": "dev-filter-fresh-teacher-0",
+    "input": 12749,
+    "target": 20
+  },
+  {
+    "id": "dev-filter-fresh-teacher-1",
+    "input": 13018,
+    "target": 43
+  },
+  {
+    "id": "dev-normalization-learner-0",
+    "input": 3830,
+    "target": 27
+  },
+  {
+    "id": "dev-normalization-learner-1",
+    "input": 6502,
+    "target": 26
+  },
+  {
+    "id": "dev-normalization-learner-2",
+    "input": 6666,
+    "target": 28
+  },
+  {
+    "id": "dev-normalization-learner-3",
+    "input": 7586,
+    "target": 33
+  },
+  {
+    "id": "dev-normalization-learner-4",
+    "input": 7903,
+    "target": 59
+  },
+  {
+    "id": "dev-normalization-learner-6",
+    "input": 8477,
+    "target": 59
+  },
+  {
+    "id": "dev-normalization-teacher-0",
+    "input": 8655,
+    "target": 67
+  },
+  {
+    "id": "dev-normalization-teacher-1",
+    "input": 9161,
+    "target": 94
+  },
+  {
+    "id": "dev-normalization-teacher-2",
+    "input": 9258,
+    "target": 67
+  },
+  {
+    "id": "dev-normalization-teacher-3",
+    "input": 9410,
+    "target": 27
+  },
+  {
+    "id": "dev-normalization-teacher-4",
+    "input": 9567,
+    "target": 20
+  },
+  {
+    "id": "dev-normalization-teacher-5",
+    "input": 9844,
+    "target": 51
+  }
+]

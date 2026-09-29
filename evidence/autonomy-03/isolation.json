@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "live_loaded_hash_matches_saved": true,
+    "base_unchanged": true,
+    "initial_adapter_restored": true,
+    "observed_outputs_restored": true
+  },
+  "passed": true,
+  "adapter_changes_observed_output": true,
+  "before": [
+    "<tool_call>\n{\"name\": \"history_search\", \"arguments\": {\"pattern\": \"filter\"}}\n</tool_call>",
+    "The repair is now complete and verified.\n\n### Summary of Actions:\n1. **Initial Issue**: The code did not trim whitespace from `from` and `to` field names in the `rename` operation, causing failures when whitespace was present (e.g., `\" amount \"`).\n2. **First Fix Attempt**: Added `.strip()` to trim whitespace, but this failed for non-string inputs (e.g., integers), as `int` objects do not support `.strip()`.\n"
+  ],
+  "adapted": [
+    "<tool_call>\n\n<tool_call>\n{\"name\": \"history_search\", \"arguments\": {\"pattern\": \"filter\"}}\n</tool_call>",
+    "<tool_call>\n{\"name\": \"replay\", \"arguments\": {\"case_id\": \"rename_trim\"}}\n</tool_call>"
+  ],
+  "restored": [
+    "<tool_call>\n{\"name\": \"history_search\", \"arguments\": {\"pattern\": \"filter\"}}\n</tool_call>",
+    "The repair is now complete and verified.\n\n### Summary of Actions:\n1. **Initial Issue**: The code did not trim whitespace from `from` and `to` field names in the `rename` operation, causing failures when whitespace was present (e.g., `\" amount \"`).\n2. **First Fix Attempt**: Added `.strip()` to trim whitespace, but this failed for non-string inputs (e.g., integers), as `int` objects do not support `.strip()`.\n"
+  ],
+  "seconds": 53.72404170798836,
+  "peak_mlx_bytes": 4471880864,
+  "loaded_hash": "f61364fcbe5fe5a8af8a84bdc34ac381c22d81200988b50810aa5222ece2635d",
+  "base_hash": "20aeecbe908496dd4b973446ac1c500ff1f7750901631459be33fd985490a141",
+  "boundary": "Separate fresh prompt caches; episodes additionally reset OS process. No assertion that changed output is useful learning."
+}
